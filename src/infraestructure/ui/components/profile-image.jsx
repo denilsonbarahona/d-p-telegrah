@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Figure, Image } from "@styles/components/profile-image.style";
 
-const Profile = ({ name, src, type }) => {
+const Profile = ({ name, src, className }) => {
   return (
-    <Figure className={type}>
+    <Figure className={className}>
       <Image alt={`${name}`} src={src} width="48" height="48" />
     </Figure>
   );
@@ -13,13 +13,13 @@ const Profile = ({ name, src, type }) => {
 Profile.propTypes = {
   name: PropTypes.string,
   src: PropTypes.string,
-  type: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Profile.defaultProps = {
   name: "",
   src: "",
-  type: "light",
+  className: "light",
 };
 
 export default Profile;
