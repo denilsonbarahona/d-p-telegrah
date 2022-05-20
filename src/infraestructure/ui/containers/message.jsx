@@ -5,6 +5,7 @@ import ProfileTitle from "@ui/components/profile-title";
 import {
   MessageBody,
   MessageContainer,
+  Article,
 } from "@styles/containers/message.style";
 
 const Message = () => {
@@ -17,14 +18,14 @@ const Message = () => {
       />
       <MessageBody>
         <ProfileTitle>Denilson Barahona</ProfileTitle>
-        <article>
+        <Article>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat
           cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad
           sequi ea? Eligendi esse est animi magnam quae numquam? Lorem ipsum
           dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi
           sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea?
           Eligendi esse est animi magnam quae numquam?
-        </article>
+        </Article>
       </MessageBody>
       <div>
         <MessageStatus />

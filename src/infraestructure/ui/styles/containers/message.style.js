@@ -10,3 +10,7 @@ export const MessageBody = styled.div`
   gap: 0.25rem;
   flex: 1;
 `;
+
+export const Article = styled.article`
+  font: var(--body-16regular);
+`;
