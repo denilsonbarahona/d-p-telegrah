@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const MessageContainer = styled.div`
   display: flex;
   gap: 1rem;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
 `;
 
 export const Button = styled.button`

@@ -1,25 +1,24 @@
 import React from "react";
 import Contact from "@ui/containers/contact";
 import Navigator from "@ui/containers/navigator";
-import Message from "@ui/containers/message";
-import Tag from "@ui/components/tag";
-import MessageBox from "@ui/components/message-box";
-import Search from "@ui/components/search";
+import SearchContainer from "@ui/containers/search-container";
+import ContactPanel from "@ui/containers/contact-panel";
+import AddContact from "@ui/components/add-contact";
+import MessageDisplay from "@ui/containers/message-display";
 
 const App = () => {
   return (
     <>
-      <Search />
-      <MessageBox />
-      <Tag />
-      <Message />
+      <SearchContainer />
+      <ContactPanel>
+        <AddContact />
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+      </ContactPanel>
       <Navigator />
-      <Contact />
-      <Contact />
-      <Contact />
-      <Contact />
-      <Contact />
-      <Contact />
+      <MessageDisplay />
     </>
   );
 };

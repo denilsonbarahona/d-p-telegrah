@@ -2,7 +2,7 @@ import React from "react";
 import DateTag from "@styles/components/tag.style";
 
 const Tag = () => {
-  return <DateTag>HOY hoy hoy hoy</DateTag>;
+  return <DateTag>Hoy</DateTag>;
 };
 
 export default Tag;
