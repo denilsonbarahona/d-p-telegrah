@@ -5,6 +5,7 @@ export const MessageContainer = styled.div`
   gap: 1rem;
   padding-block: 1rem;
   padding-inline: 0.5rem;
+  box-shadow: 1px 0 2px 1px #ededed;
 `;
 
 export const Button = styled.button`

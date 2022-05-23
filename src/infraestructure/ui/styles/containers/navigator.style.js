@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   padding: 1rem;
+  box-shadow: 1px 0 2px 1px #ededed;
 
   & ul {
     display: flex;
