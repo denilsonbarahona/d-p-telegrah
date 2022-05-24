@@ -11,8 +11,18 @@ const MessagePanel = () => {
       <SearchContainer />
       <SidePanel>
         <AddContact />
-        <Contact />
-        <Contact />
+        <Contact
+          name="Denilson Barahona"
+          showStatus
+          src="https://picsum.photos/id/237/200/300"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea? Eligendi esse est animi magnam quae numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea? Eligendi esse est animi magnam quae numquam?"
+        />
+        <Contact
+          name="Denilson Barahona"
+          showStatus
+          src="https://picsum.photos/id/237/200/300"
+          paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea? Eligendi esse est animi magnam quae numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea? Eligendi esse est animi magnam quae numquam?"
+        />
       </SidePanel>
       <Navigator path="/message" />
     </>

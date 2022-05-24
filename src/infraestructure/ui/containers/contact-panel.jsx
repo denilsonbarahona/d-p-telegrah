@@ -11,8 +11,16 @@ const ContactPanel = () => {
       <SearchContainer />
       <SidePanel>
         <AddContact />
-        <Contact />
-        <Contact />
+        <Contact
+          name="Denilson Barahona"
+          src="https://picsum.photos/id/237/200/300"
+          paragraph="últ. vez recientemente"
+        />
+        <Contact
+          name="Denilson Barahona"
+          src="https://picsum.photos/id/237/200/300"
+          paragraph="últ. vez recientemente"
+        />
       </SidePanel>
       <Navigator path="/" />
     </>

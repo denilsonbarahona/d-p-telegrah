@@ -9,11 +9,11 @@ const Title = styled.h2`
   font: var(--body-16regular);
   color: var(--black);
 
-  &.isGray {
-    color: var(--light-grey-1);
-  }
   &.isRed {
     color: var(--light-red);
+  }
+  &.isBlue {
+    color: var(--light-blue);
   }
 `;
 

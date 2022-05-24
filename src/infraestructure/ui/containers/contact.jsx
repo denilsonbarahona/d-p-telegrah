@@ -9,28 +9,44 @@ import {
   ContactContent,
   ContactNotification,
 } from "@styles/containers/contact.style";
+import PropTypes from "prop-types";
 
-const Contact = () => {
+const Contact = ({ name, titleClassName, src, paragraph, showStatus }) => {
   return (
     <ContactContainer>
-      <Profile name="denilson" src="https://imgur.com/gallery/3snKn9E.png" />
+      <Profile name={name} src={src} />
       <div>
         <ContactContent>
-          <ProfileTitle>Denilson</ProfileTitle>
+          <ProfileTitle className={titleClassName}>{name}</ProfileTitle>
           <ProfileParagraph className="base isGray">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
-            architecto repudiandae esse amet non animi odit est consectetur
-            nulla laborum in nemo dignissimos, fugit iure labore aut quos
-            itaque! Velit!
+            {paragraph}
           </ProfileParagraph>
         </ContactContent>
       </div>
-      <ContactNotification>
-        <MessageStatus />
-        <MessageAlert />
-      </ContactNotification>
+      {showStatus && (
+        <ContactNotification>
+          <MessageStatus />
+          <MessageAlert />
+        </ContactNotification>
+      )}
     </ContactContainer>
   );
+};
+
+Contact.propTypes = {
+  name: PropTypes.string,
+  titleClassName: PropTypes.string,
+  src: PropTypes.string,
+  paragraph: PropTypes.string,
+  showStatus: PropTypes.bool,
+};
+
+Contact.defaultProps = {
+  name: "",
+  titleClassName: "",
+  src: "",
+  paragraph: "",
+  showStatus: false,
 };
 
 export default Contact;
