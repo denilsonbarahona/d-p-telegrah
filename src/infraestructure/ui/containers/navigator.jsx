@@ -1,6 +1,6 @@
-import React, { useMemo } from "react";
+import React from "react";
 import NavItem from "@ui/components/nav-item";
-import { IconContext } from "react-icons";
+import PropTypes from "prop-types";
 import {
   IoPhonePortraitOutline,
   IoPersonOutline,
@@ -9,61 +9,41 @@ import {
 } from "react-icons/io5";
 import Nav from "@styles/containers/navigator.style";
 
-const Navigator = () => {
+const Navigator = ({ path }) => {
   return (
     <Nav>
       <ul>
         <li>
-          <NavItem selected={true}>
-            <IconContext.Provider
-              value={useMemo(
-                () => ({ size: "18px", color: "#ffffff" }),
-                [{ size: "18px", color: "#ffffff" }]
-              )}
-            >
-              <IoPersonOutline />
-            </IconContext.Provider>
+          <NavItem selected={path === "/"} to="/">
+            <IoPersonOutline />
           </NavItem>
         </li>
         <li>
-          <NavItem>
-            <IconContext.Provider
-              value={useMemo(
-                () => ({ size: "18px", color: "#62a1dd" }),
-                [{ size: "18px", color: "#62a1dd" }]
-              )}
-            >
-              <IoPhonePortraitOutline />
-            </IconContext.Provider>
+          <NavItem selected={path === "/call"} to="/call">
+            <IoPhonePortraitOutline />
           </NavItem>
         </li>
         <li>
-          <NavItem>
-            <IconContext.Provider
-              value={useMemo(
-                () => ({ size: "18px", color: "#62a1dd" }),
-                [{ size: "18px", color: "#62a1dd" }]
-              )}
-            >
-              <IoChatboxOutline />
-            </IconContext.Provider>
+          <NavItem selected={path === "/message"} to="/message">
+            <IoChatboxOutline />
           </NavItem>
         </li>
         <li>
-          <NavItem>
-            <IconContext.Provider
-              value={useMemo(
-                () => ({ size: "18px", color: "#62a1dd" }),
-                [{ size: "18px", color: "#62a1dd" }]
-              )}
-            >
-              <IoSettingsOutline />
-            </IconContext.Provider>
+          <NavItem selected={path === "/config"} to="/config">
+            <IoSettingsOutline />
           </NavItem>
         </li>
       </ul>
     </Nav>
   );
+};
+
+Navigator.propTypes = {
+  path: PropTypes.string,
+};
+
+Navigator.defaultProps = {
+  path: "/",
 };
 
 export default Navigator;

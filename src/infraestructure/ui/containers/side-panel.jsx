@@ -7,7 +7,7 @@ const SidePanel = ({ children }) => {
 };
 
 SidePanel.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 SidePanel.defaultProps = {

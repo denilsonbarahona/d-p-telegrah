@@ -5,7 +5,7 @@ import AddContact from "@ui/components/add-contact";
 import Contact from "@ui/containers/contact";
 import Navigator from "@ui/containers/navigator";
 
-const ContactPanel = () => {
+const MessagePanel = () => {
   return (
     <>
       <SearchContainer />
@@ -14,9 +14,9 @@ const ContactPanel = () => {
         <Contact />
         <Contact />
       </SidePanel>
-      <Navigator path="/" />
+      <Navigator path="/message" />
     </>
   );
 };
 
-export default ContactPanel;
+export default MessagePanel;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
+  color: var(--light-blue);
   display: grid;
   place-content: center;
   background: transparent;
@@ -14,6 +16,7 @@ export const Container = styled.div`
     inline-size: 2rem;
     block-size: 2rem;
     border-radius: 50%;
+    color: var(--white);
     background-color: var(--light-blue);
     display: grid;
     place-items: center;

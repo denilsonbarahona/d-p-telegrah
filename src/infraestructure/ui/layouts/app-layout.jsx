@@ -7,7 +7,7 @@ const AppLayout = ({ children }) => {
 };
 
 AppLayout.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 AppLayout.defaultProps = {

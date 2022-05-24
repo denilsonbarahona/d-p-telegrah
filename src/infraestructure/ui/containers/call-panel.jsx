@@ -1,22 +1,21 @@
 import React from "react";
-import SearchContainer from "@ui/containers/search-container";
 import SidePanel from "@ui/containers/side-panel";
-import AddContact from "@ui/components/add-contact";
 import Contact from "@ui/containers/contact";
 import Navigator from "@ui/containers/navigator";
 
-const ContactPanel = () => {
+const CallPanel = () => {
   return (
     <>
-      <SearchContainer />
+      <div>
+        <h2>Llamadas recientes</h2>
+      </div>
       <SidePanel>
-        <AddContact />
         <Contact />
         <Contact />
       </SidePanel>
-      <Navigator path="/" />
+      <Navigator path="/call" />
     </>
   );
 };
 
-export default ContactPanel;
+export default CallPanel;
