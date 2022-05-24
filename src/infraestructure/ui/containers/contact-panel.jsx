@@ -1,17 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Container from "@styles/containers/contact-panel";
+import SidePanel from "@ui/containers/side-panel";
+import AddContact from "@ui/components/add-contact";
+import Contact from "@ui/containers/contact";
 
-const ContactPanel = ({ children }) => {
-  return <Container>{children}</Container>;
-};
-
-ContactPanel.propTypes = {
-  children: PropTypes.element,
-};
-
-ContactPanel.defaultProps = {
-  children: null,
+const ContactPanel = () => {
+  return (
+    <SidePanel>
+      <AddContact />
+      <Contact />
+      <Contact />
+    </SidePanel>
+  );
 };
 
 export default ContactPanel;

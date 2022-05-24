@@ -13,15 +13,10 @@ const MessageDisplay = () => {
     <Main>
       <Header />
       <MessageContainer>
-        <Tag />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
+        <div>
+          <Tag />
+          <Message />
+        </div>
       </MessageContainer>
       <MessageBox />
     </Main>
