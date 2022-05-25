@@ -30,4 +30,16 @@
     "arrow-body-style": [0, "as-needed"]
   },
   "parser": "@babel/eslint-parser"
+  /*   "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@ui", "./src/infraestructure/ui"],
+          ["@redux","./src/infraestructure/redux"],
+          ["@styles", "./src/infraestructure/ui/styles"],
+          ["@statics","src/infraestructure/statics"],
+        ]
+      }
+    }
+  } */
 }
