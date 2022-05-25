@@ -9,7 +9,7 @@
     "lint": "eslint -c .eslintrc.json src/",
     "lint:fix": "eslint -c .eslintrc.json src/ --fix",
     "format": "prettier --write \"src/\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prepare": "husky install"
   },
   "keywords": [
@@ -34,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
     "@babel/preset-react": "^7.17.12",
+    "@testing-library/react": "^13.2.0",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.15.0",
@@ -48,6 +49,8 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^12.4.1",
     "prettier": "2.6.2",
     "terser-webpack-plugin": "^5.3.1",

@@ -29,17 +29,24 @@
     ],
     "arrow-body-style": [0, "as-needed"]
   },
-  "parser": "@babel/eslint-parser"
-  /*   "settings": {
+  "parser": "@babel/eslint-parser",
+  "settings": {
     "import/resolver": {
       "alias": {
         "map": [
-          ["@ui", "./src/infraestructure/ui"],
-          ["@redux","./src/infraestructure/redux"],
-          ["@styles", "./src/infraestructure/ui/styles"],
-          ["@statics","src/infraestructure/statics"],
+          ["@", "src"],
+          ["@Routes", "src/infrastructure/ui/routes"],
+          ["@Redux", "src/infrastructure/redux"],
+          ["@Images", "src/infrastructure/statics/images"],
+          ["@UI-components", "src/infrastructure/ui/components"],
+          ["@UI-containers", "src/infrastructure/ui/containers"],
+          ["@UI-layouts", "src/infrastructure/ui/layouts"],
+          ["@Style", "src/infrastructure/ui/styles"],
+          ["@Style-components", "src/infrastructure/ui/styles/components"],
+          ["@Style-containers", "src/infrastructure/ui/styles/containers"],
+          ["@Style-layouts", "src/infrastructure/ui/styles/layouts"]
         ]
       }
     }
-  } */
+  }
 }

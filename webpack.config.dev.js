@@ -10,10 +10,32 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
-      "@ui": path.resolve(__dirname, "src/infraestructure/ui"),
-      "@redux": path.resolve(__dirname, "src/infraestructure/redux"),
-      "@styles": path.resolve(__dirname, "src/infraestructure/ui/styles"),
-      "@statics": path.resolve(__dirname, "src/infraestructure/statics"),
+      "@": path.resolve(__dirname, "src"),
+      "@Routes": path.resolve(__dirname, "src/infrastructure/ui/routes"),
+      "@Redux": path.resolve(__dirname, "src/infrastructure/redux"),
+      "@Images": path.resolve(__dirname, "src/infrastructure/statics/images"),
+      "@UI-components": path.resolve(
+        __dirname,
+        "src/infrastructure/ui/components"
+      ),
+      "@UI-containers": path.resolve(
+        __dirname,
+        "src/infrastructure/ui/containers"
+      ),
+      "@UI-layouts": path.resolve(__dirname, "src/infrastructure/ui/layouts"),
+      "@Style": path.resolve(__dirname, "src/infrastructure/ui/styles"),
+      "@Style-components": path.resolve(
+        __dirname,
+        "src/infrastructure/ui/styles/components"
+      ),
+      "@Style-containers": path.resolve(
+        __dirname,
+        "src/infrastructure/ui/styles/containers"
+      ),
+      "@Style-layouts": path.resolve(
+        __dirname,
+        "src/infrastructure/ui/styles/layouts"
+      ),
     },
   },
   mode: "development",
