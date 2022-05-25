@@ -16,6 +16,7 @@ module.exports = {
       "@ui": path.resolve(__dirname, "src/infraestructure/ui"),
       "@redux": path.resolve(__dirname, "src/infraestructure/redux"),
       "@styles": path.resolve(__dirname, "src/infraestructure/ui/styles"),
+      "@statics": path.resolve(__dirname, "src/infraestructure/statics"),
     },
   },
   mode: "production",
@@ -33,7 +34,7 @@ module.exports = {
         use: [{ loader: "html-loader" }],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(woff|woff2|eot|ttf|otf|webp)$/i,
         type: "asset/resource",
       },
     ],
