@@ -25,7 +25,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">13/13</span>
+            <span class="fraction">12/12</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -43,7 +43,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">11/11</span>
+            <span class="fraction">10/10</span>
           </div>
         </div>
         <p class="quiet">
@@ -115,7 +115,15 @@
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,10 +146,16 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,35 +194,42 @@ import {
   Form,
   Input,
   Button,
+  CloseButton,
 } from "@Style-components/add-contact.style";
 import Modal from "@UI-components/modal";
 &nbsp;
 const AddContact = () =&gt; {
   const showModalPlain = (event) =&gt; {
     event.stopPropagation();
-    const $modal = document.querySelector("#dialog"); 
+    const $modal = document.querySelector("#dialog");
     <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof $modal.showModal === "function") $modal.showModal();
   };
 &nbsp;
   const hideModal = (event) =&gt; {
     event.stopPropagation();
     const $modal = document.querySelector("#dialog");
-    console.log($modal.close)
     <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof $modal.close === "function") $modal.close();
   };
 &nbsp;
   return (
     &lt;&gt;
-      &lt;AddContainer aria-label="click to add new contact" onClick={showModalPlain}&gt;
+      &lt;AddContainer
+        aria-label="click to add new contact"
+        onClick={showModalPlain}
+      &gt;
         &lt;IoPersonAddOutline /&gt;
         Add contact
       &lt;/AddContainer&gt;
       &lt;Modal&gt;
         &lt;ModalTitleContainer&gt;
           &lt;ModalTitle&gt;Add a new contact&lt;/ModalTitle&gt;
-          &lt;button type="button" onClick={hideModal} aria-label="close modal"&gt;
+          &lt;CloseButton
+            type="button"
+            onClick={hideModal}
+            aria-label="close modal"
+          &gt;
             &lt;IoCloseOutline aria-hidden className="modal__close" /&gt;
-          &lt;/button&gt;
+          &lt;/CloseButton&gt;
         &lt;/ModalTitleContainer&gt;
         &lt;Form&gt;
           &lt;Input type="text" placeholder="Name" /&gt;
@@ -241,7 +262,7 @@ export default AddContact;
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at Sat May 28 2022 21:45:46 GMT-0600 (hora estándar central)
+      at Sat May 28 2022 22:49:02 GMT-0600 (hora estándar central)
     </div>
     <script src="../prettify.js"></script>
     <script>

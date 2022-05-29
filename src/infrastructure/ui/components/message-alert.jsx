@@ -1,10 +1,10 @@
 import React from "react";
 import AlertBubble from "@Style-components/message-alert.style";
 
-const MessageAlert = () => {
+const MessageAlert = ({ counter }) => {
   return (
     <AlertBubble role="alert" aria-label="8 message to read">
-      8
+      {counter}
     </AlertBubble>
   );
 };

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageAlert to match snapshot 1`] = `
+<div>
+  <div
+    aria-label="8 message to read"
+    class="sc-bczRLJ ldMgCU"
+    role="alert"
+  >
+    8
+  </div>
+</div>
+`;

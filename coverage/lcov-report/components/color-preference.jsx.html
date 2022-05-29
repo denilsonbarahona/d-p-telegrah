@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code coverage report for components/modal.jsx</title>
+    <title>Code coverage report for components/color-preference.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,7 +19,7 @@
       <div class="pad1">
         <h1>
           <a href="../index.html">All files</a> /
-          <a href="index.html">components</a> modal.jsx
+          <a href="index.html">components</a> color-preference.jsx
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
@@ -82,52 +82,55 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import reactDom from "react-dom";
 import PropTypes from "prop-types";
-import Dialog from "@Style-components/modal.style";
+import Button from "@Style-components/color-preference.style";
 &nbsp;
-const Modal = ({ children }) =&gt; {
-  return reactDom.createPortal(
-    &lt;Dialog id="dialog" aria-label="popup"&gt;
-      {children}
-    &lt;/Dialog&gt;,
-    document.querySelector("#modal")
+const Preference = ({ text, src }) =&gt; {
+  return (
+    &lt;Button aria-label={`Click to change to ${text} theme`} type="button"&gt;
+      &lt;img aria-hidden src={src} alt={`${text}`} width="195" height="88" /&gt;
+      {text}
+    &lt;/Button&gt;
   );
 };
 &nbsp;
-Modal.propTypes = {
-  children: PropTypes.node,
+Preference.propTypes = {
+  text: PropTypes.string,
+  src: PropTypes.string,
 };
 &nbsp;
-Modal.defaultProps = {
-  children: null,
+Preference.defaultProps = {
+  text: "",
+  src: "",
 };
 &nbsp;
-export default Modal;
+export default Preference;
 &nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>

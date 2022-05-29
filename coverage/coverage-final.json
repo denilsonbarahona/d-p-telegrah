@@ -3,111 +3,107 @@
     "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\add-contact.jsx",
     "statementMap": {
       "0": {
-        "start": { "line": 13, "column": 19 },
-        "end": { "line": 54, "column": 1 }
+        "start": { "line": 14, "column": 19 },
+        "end": { "line": 61, "column": 1 }
       },
       "1": {
-        "start": { "line": 14, "column": 25 },
-        "end": { "line": 18, "column": 3 }
+        "start": { "line": 15, "column": 25 },
+        "end": { "line": 19, "column": 3 }
       },
       "2": {
-        "start": { "line": 15, "column": 4 },
-        "end": { "line": 15, "column": 28 }
+        "start": { "line": 16, "column": 4 },
+        "end": { "line": 16, "column": 28 }
       },
       "3": {
-        "start": { "line": 16, "column": 19 },
-        "end": { "line": 16, "column": 52 }
+        "start": { "line": 17, "column": 19 },
+        "end": { "line": 17, "column": 52 }
       },
       "4": {
-        "start": { "line": 17, "column": 4 },
-        "end": { "line": 17, "column": 67 }
+        "start": { "line": 18, "column": 4 },
+        "end": { "line": 18, "column": 67 }
       },
       "5": {
-        "start": { "line": 17, "column": 48 },
-        "end": { "line": 17, "column": 67 }
+        "start": { "line": 18, "column": 48 },
+        "end": { "line": 18, "column": 67 }
       },
       "6": {
-        "start": { "line": 20, "column": 20 },
+        "start": { "line": 21, "column": 20 },
         "end": { "line": 25, "column": 3 }
       },
       "7": {
-        "start": { "line": 21, "column": 4 },
-        "end": { "line": 21, "column": 28 }
+        "start": { "line": 22, "column": 4 },
+        "end": { "line": 22, "column": 28 }
       },
       "8": {
-        "start": { "line": 22, "column": 19 },
-        "end": { "line": 22, "column": 52 }
+        "start": { "line": 23, "column": 19 },
+        "end": { "line": 23, "column": 52 }
       },
       "9": {
-        "start": { "line": 23, "column": 4 },
-        "end": { "line": 23, "column": 29 }
-      },
-      "10": {
         "start": { "line": 24, "column": 4 },
         "end": { "line": 24, "column": 59 }
       },
-      "11": {
+      "10": {
         "start": { "line": 24, "column": 44 },
         "end": { "line": 24, "column": 59 }
       },
-      "12": {
+      "11": {
         "start": { "line": 27, "column": 2 },
-        "end": { "line": 53, "column": 4 }
+        "end": { "line": 60, "column": 4 }
       }
     },
     "fnMap": {
       "0": {
         "name": "(anonymous_0)",
         "decl": {
-          "start": { "line": 13, "column": 19 },
-          "end": { "line": 13, "column": 20 }
+          "start": { "line": 14, "column": 19 },
+          "end": { "line": 14, "column": 20 }
         },
         "loc": {
-          "start": { "line": 13, "column": 25 },
-          "end": { "line": 54, "column": 1 }
+          "start": { "line": 14, "column": 25 },
+          "end": { "line": 61, "column": 1 }
         },
-        "line": 13
+        "line": 14
       },
       "1": {
         "name": "(anonymous_1)",
         "decl": {
-          "start": { "line": 14, "column": 25 },
-          "end": { "line": 14, "column": 26 }
+          "start": { "line": 15, "column": 25 },
+          "end": { "line": 15, "column": 26 }
         },
         "loc": {
-          "start": { "line": 14, "column": 36 },
-          "end": { "line": 18, "column": 3 }
+          "start": { "line": 15, "column": 36 },
+          "end": { "line": 19, "column": 3 }
         },
-        "line": 14
+        "line": 15
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
-          "start": { "line": 20, "column": 20 },
-          "end": { "line": 20, "column": 21 }
+          "start": { "line": 21, "column": 20 },
+          "end": { "line": 21, "column": 21 }
         },
         "loc": {
-          "start": { "line": 20, "column": 31 },
+          "start": { "line": 21, "column": 31 },
           "end": { "line": 25, "column": 3 }
         },
-        "line": 20
+        "line": 21
       }
     },
     "branchMap": {
       "0": {
         "loc": {
-          "start": { "line": 17, "column": 4 },
-          "end": { "line": 17, "column": 67 }
+          "start": { "line": 18, "column": 4 },
+          "end": { "line": 18, "column": 67 }
         },
         "type": "if",
         "locations": [
           {
-            "start": { "line": 17, "column": 4 },
-            "end": { "line": 17, "column": 67 }
+            "start": { "line": 18, "column": 4 },
+            "end": { "line": 18, "column": 67 }
           },
           { "start": {}, "end": {} }
         ],
-        "line": 17
+        "line": 18
       },
       "1": {
         "loc": {
@@ -137,32 +133,105 @@
       "8": 1,
       "9": 1,
       "10": 1,
-      "11": 1,
-      "12": 3
+      "11": 3
     },
     "f": { "0": 3, "1": 2, "2": 1 },
     "b": { "0": [2, 0], "1": [1, 0] },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5f6c549e9740765a656bee05a6055a6c9e8df9d4"
+    "hash": "ff054776902d2c28a4dd40eba5202b245357d0a5"
+  },
+  "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\color-preference.jsx": {
+    "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\color-preference.jsx",
+    "statementMap": {
+      "0": {
+        "start": { "line": 5, "column": 19 },
+        "end": { "line": 12, "column": 1 }
+      },
+      "1": {
+        "start": { "line": 6, "column": 2 },
+        "end": { "line": 11, "column": 4 }
+      },
+      "2": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 17, "column": 2 }
+      },
+      "3": {
+        "start": { "line": 19, "column": 0 },
+        "end": { "line": 22, "column": 2 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 5, "column": 19 },
+          "end": { "line": 5, "column": 20 }
+        },
+        "loc": {
+          "start": { "line": 5, "column": 38 },
+          "end": { "line": 12, "column": 1 }
+        },
+        "line": 5
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 1, "2": 1, "3": 1 },
+    "f": { "0": 1 },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "ef012bba98e34e6b7d4e7ab5ba551de92bb5ed25"
+  },
+  "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\message-alert.jsx": {
+    "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\message-alert.jsx",
+    "statementMap": {
+      "0": {
+        "start": { "line": 4, "column": 21 },
+        "end": { "line": 10, "column": 1 }
+      },
+      "1": {
+        "start": { "line": 5, "column": 2 },
+        "end": { "line": 9, "column": 4 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 4, "column": 21 },
+          "end": { "line": 4, "column": 22 }
+        },
+        "loc": {
+          "start": { "line": 4, "column": 38 },
+          "end": { "line": 10, "column": 1 }
+        },
+        "line": 4
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 2 },
+    "f": { "0": 2 },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "74a6a583d3069d4fde73e112be2092f329a969e1"
   },
   "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\modal.jsx": {
     "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\components\\modal.jsx",
     "statementMap": {
       "0": {
         "start": { "line": 6, "column": 14 },
-        "end": { "line": 11, "column": 1 }
+        "end": { "line": 13, "column": 1 }
       },
       "1": {
         "start": { "line": 7, "column": 2 },
-        "end": { "line": 10, "column": 4 }
+        "end": { "line": 12, "column": 4 }
       },
       "2": {
-        "start": { "line": 13, "column": 0 },
-        "end": { "line": 15, "column": 2 }
+        "start": { "line": 15, "column": 0 },
+        "end": { "line": 17, "column": 2 }
       },
       "3": {
-        "start": { "line": 17, "column": 0 },
-        "end": { "line": 19, "column": 2 }
+        "start": { "line": 19, "column": 0 },
+        "end": { "line": 21, "column": 2 }
       }
     },
     "fnMap": {
@@ -174,7 +243,7 @@
         },
         "loc": {
           "start": { "line": 6, "column": 32 },
-          "end": { "line": 11, "column": 1 }
+          "end": { "line": 13, "column": 1 }
         },
         "line": 6
       }
@@ -184,7 +253,7 @@
     "f": { "0": 3 },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "323e243271e31be3f1fa9f7fe944aefc3a940a25"
+    "hash": "b38a8639aaaa4bd4867d58569d5931e20d009194"
   },
   "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\add-contact.style.js": {
     "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\add-contact.style.js",
@@ -210,17 +279,53 @@
         "end": { "line": 43, "column": 1 }
       },
       "5": {
-        "start": { "line": 45, "column": 22 },
-        "end": { "line": 52, "column": 1 }
+        "start": { "line": 45, "column": 27 },
+        "end": { "line": 48, "column": 1 }
+      },
+      "6": {
+        "start": { "line": 50, "column": 22 },
+        "end": { "line": 57, "column": 1 }
       }
     },
     "fnMap": {},
     "branchMap": {},
-    "s": { "0": 1, "1": 1, "2": 1, "3": 1, "4": 1, "5": 1 },
+    "s": { "0": 1, "1": 1, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1 },
     "f": {},
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6b39c74183362f1b79ae06c6d9eb77818445b1a2"
+    "hash": "e9b0f4c5b643412825594c17583780fefe6e5a79"
+  },
+  "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\color-preference.style.js": {
+    "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\color-preference.style.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 3, "column": 15 },
+        "end": { "line": 21, "column": 1 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "8e032546f6191557529b3c9168caf401278c2c87"
+  },
+  "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\message-alert.style.js": {
+    "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\message-alert.style.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 3, "column": 20 },
+        "end": { "line": 11, "column": 1 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "8ac51dccee3d7f28fb72dd45d77945079e4cd5af"
   },
   "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\modal.style.js": {
     "path": "D:\\Denilson\\Cursos\\FrontEnd\\Projects\\d-p-telegrafo\\src\\infrastructure\\ui\\styles\\components\\modal.style.js",
