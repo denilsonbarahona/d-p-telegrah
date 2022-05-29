@@ -7,11 +7,12 @@ import {
   Form,
   Input,
   Button,
+  CloseButton,
 } from "@Style-components/add-contact.style";
 import Modal from "@UI-components/modal";
 
 const AddContact = () => {
-  const showModal = (event) => {
+  const showModalPlain = (event) => {
     event.stopPropagation();
     const $modal = document.querySelector("#dialog");
     if (typeof $modal.showModal === "function") $modal.showModal();
@@ -24,17 +25,26 @@ const AddContact = () => {
   };
 
   return (
-    <AddContainer aria-label="click to add new contact" onClick={showModal}>
+    <>
+      <AddContainer
+        aria-label="click to add new contact"
+        onClick={showModalPlain}
+      >
+        <IoPersonAddOutline />
+        Add contact
+      </AddContainer>
       <Modal>
         <ModalTitleContainer>
           <ModalTitle>Add a new contact</ModalTitle>
-          <IoCloseOutline
-            tabIndex="0"
+          <CloseButton
+            type="button"
             onClick={hideModal}
-            className="modal__close"
-          />
+            aria-label="close modal"
+          >
+            <IoCloseOutline aria-hidden className="modal__close" />
+          </CloseButton>
         </ModalTitleContainer>
-        <Form method="dialog">
+        <Form>
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="Email" />
           <Button
@@ -46,9 +56,7 @@ const AddContact = () => {
           </Button>
         </Form>
       </Modal>
-      <IoPersonAddOutline />
-      Add contact
-    </AddContainer>
+    </>
   );
 };
 

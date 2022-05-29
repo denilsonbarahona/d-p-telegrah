@@ -15,6 +15,7 @@
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/jsx-filename-extension": [0],
     "react/function-component-definition": [
       0,
@@ -33,19 +34,20 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [
-          ["@", "src"],
-          ["@Routes", "src/infrastructure/ui/routes"],
-          ["@Redux", "src/infrastructure/redux"],
-          ["@Images", "src/infrastructure/statics/images"],
-          ["@UI-components", "src/infrastructure/ui/components"],
-          ["@UI-containers", "src/infrastructure/ui/containers"],
-          ["@UI-layouts", "src/infrastructure/ui/layouts"],
-          ["@Style", "src/infrastructure/ui/styles"],
-          ["@Style-components", "src/infrastructure/ui/styles/components"],
-          ["@Style-containers", "src/infrastructure/ui/styles/containers"],
-          ["@Style-layouts", "src/infrastructure/ui/styles/layouts"]
-        ]
+        "alias": true
+        /* "map": [
+          ["@", "./src"],
+          ["@Routes", "./src/infrastructure/ui/routes"],
+          ["@Redux", "./src/infrastructure/redux"],
+          ["@Images", "./src/infrastructure/statics/images"],
+          ["@UI-components", "./src/infrastructure/ui/components"],
+          ["@UI-containers", "./src/infrastructure/ui/containers"],
+          ["@UI-layouts", "./src/infrastructure/ui/layouts"],
+          ["@Style", "./src/infrastructure/ui/styles"],
+          ["@Style-components", "./src/infrastructure/ui/styles/components"],
+          ["@Style-containers", "./src/infrastructure/ui/styles/containers"],
+          ["@Style-layouts", "./src/infrastructure/ui/styles/layouts"]
+        ] */
       }
     }
   }

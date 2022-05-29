@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --config webpack.config.dev.js",
-    "lint": "eslint -c .eslintrc.json src/",
+    "lint": "eslint -c .eslintrc.json src/**",
     "lint:fix": "eslint -c .eslintrc.json src/ --fix",
     "format": "prettier --write \"src/\"",
     "test": "jest",
@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
+    "@testing-library/jest-dom": "^5.16.4",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

@@ -89,17 +89,19 @@ module.exports = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    "@": "<rootDir>/src",
-    "@Routes": "<rootDir>/src/infrastructure/ui/routes",
-    "@Redux": "<rootDir>/src/infrastructure/redux",
-    "@Images": "<rootDir>/src/infrastructure/statics/images",
-    "@UI-components": "<rootDir>/src/infrastructure/ui/components",
-    "@UI-containers": "<rootDir>/src/infrastructure/ui/containers",
-    "@UI-layouts": "<rootDir>/src/infrastructure/ui/layouts",
-    "@Style": "<rootDir>/src/infrastructure/ui/styles",
-    "@Style-components": "<rootDir>/src/infrastructure/ui/styles/components",
-    "@Style-containers": "<rootDir>/src/infrastructure/ui/styles/containers",
-    "@Style-layouts": "<rootDir>/src/infrastructure/ui/styles/layouts",
+    "^@/(.*)": "<rootDir>/src/$1",
+    "^@Routes/(.*)": "<rootDir>/src/infrastructure/ui/routes/$1",
+    "^@Redux/(.*)": "<rootDir>/src/infrastructure/redux/$1",
+    "^@Images/(.*)": "<rootDir>/src/infrastructure/statics/images/$1",
+    "^@UI-components/(.*)": "<rootDir>/src/infrastructure/ui/components/$1",
+    "^@UI-containers/(.*)": "<rootDir>/src/infrastructure/ui/containers/$1",
+    "^@UI-layouts/(.*)": "<rootDir>/src/infrastructure/ui/layouts/$1",
+    "^@Style/(.*)": "<rootDir>/src/infrastructure/ui/styles/$1",
+    "^@Style-components/(.*)":
+      "<rootDir>/src/infrastructure/ui/styles/components/$1",
+    "^@Style-containers/(.*)":
+      "<rootDir>/src/infrastructure/ui/styles/containers/$1",
+    "^@Style-layouts/(.*)": "<rootDir>/src/infrastructure/ui/styles/layouts/$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -147,7 +149,7 @@ module.exports = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -185,9 +187,9 @@ module.exports = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  transform: {
+  /*   transform: {
     "\\.[jt]sx?$": "babel-jest",
-  },
+  }, */
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

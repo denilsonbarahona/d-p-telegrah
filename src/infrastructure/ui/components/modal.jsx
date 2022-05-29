@@ -5,7 +5,9 @@ import Dialog from "@Style-components/modal.style";
 
 const Modal = ({ children }) => {
   return reactDom.createPortal(
-    <Dialog id="dialog">{children}</Dialog>,
+    <Dialog id="dialog" aria-label="popup">
+      {children}
+    </Dialog>,
     document.querySelector("#modal")
   );
 };

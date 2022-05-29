@@ -42,6 +42,11 @@ export const Input = styled.input`
   padding: 0.25rem;
 `;
 
+export const CloseButton = styled.button`
+  border: none;
+  background: transparent;
+`;
+
 export const Button = styled.button`
   margin-block-start: 1rem;
   font: var(--body-16regular);
