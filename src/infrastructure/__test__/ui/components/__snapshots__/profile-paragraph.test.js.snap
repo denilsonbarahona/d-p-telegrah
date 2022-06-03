@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Paragraph to match snapshot 1`] = `
+<div>
+  <p
+    class="sc-bczRLJ gewZfU"
+  >
+    this is a test
+  </p>
+</div>
+`;

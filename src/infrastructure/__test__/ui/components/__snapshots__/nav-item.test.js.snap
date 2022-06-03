@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav item to match snapshot 1`] = `
+<div>
+  <a
+    class="sc-bczRLJ tEisB"
+    href="/"
+  >
+    <div
+      class="sc-gsnTZi dFFSPF isSelected"
+    >
+      <span>
+        test
+      </span>
+    </div>
+  </a>
+</div>
+`;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1653799742055" clover="3.2.0">
-  <project timestamp="1653799742055" name="All files">
-    <metrics statements="30" coveredstatements="30" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="6" elements="40" coveredelements="38" complexity="0" loc="30" ncloc="30" packages="2" files="8" classes="8"/>
+<coverage generated="1653971666391" clover="3.2.0">
+  <project timestamp="1653971666391" name="All files">
+    <metrics statements="91" coveredstatements="91" conditionals="8" coveredconditionals="5" methods="19" coveredmethods="19" elements="118" coveredelements="115" complexity="0" loc="91" ncloc="91" packages="4" files="32" classes="32"/>
     <package name="components">
-      <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="6"/>
+      <metrics statements="45" coveredstatements="45" conditionals="6" coveredconditionals="4" methods="15" coveredmethods="15"/>
       <file name="add-contact.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\add-contact.jsx">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="14" count="1" type="stmt"/>
@@ -26,8 +26,19 @@
       </file>
       <file name="message-alert.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\message-alert.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="message-box.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\message-box.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="message-status.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\message-status.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
       <file name="modal.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\modal.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -36,9 +47,76 @@
         <line num="15" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
       </file>
+      <file name="nav-item.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\nav-item.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+      </file>
+      <file name="profile-image.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\profile-image.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+      </file>
+      <file name="profile-paragraph.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\profile-paragraph.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="profile-title.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\profile-title.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="search.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\search.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+      <file name="tag.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\components\tag.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="containers">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <file name="call-panel.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\containers\call-panel.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="contact.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\containers\contact.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+      <file name="navigator.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\containers\navigator.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+      <file name="side-panel.jsx" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\containers\side-panel.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
     </package>
     <package name="styles.components">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="add-contact.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\add-contact.style.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
@@ -55,9 +133,70 @@
       </file>
       <file name="message-alert.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\message-alert.style.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="message-box.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\message-box.style.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="message-status.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\message-status.style.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
       </file>
       <file name="modal.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\modal.style.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="nav-item.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\nav-item.style.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="profile-image.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\profile-image.style.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+      <file name="profile-paragraph.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\profile-paragraph.style.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="profile-title.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\profile-title.style.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="search.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\search.style.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="tag.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\components\tag.style.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="styles.containers">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="call-panel.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\containers\call-panel.style.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="contact.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\containers\contact.style.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="navigator.style.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\containers\navigator.style.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="side-panel.js" path="D:\Denilson\Cursos\FrontEnd\Projects\d-p-telegrafo\src\infrastructure\ui\styles\containers\side-panel.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
       </file>

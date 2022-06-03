@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code coverage report for components/message-alert.jsx</title>
+    <title>Code coverage report for components/search.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,7 +19,7 @@
       <div class="pad1">
         <h1>
           <a href="../index.html">All files</a> /
-          <a href="index.html">components</a> message-alert.jsx
+          <a href="index.html">components</a> search.jsx
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
@@ -71,11 +71,15 @@
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -84,17 +88,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import AlertBubble from "@Style-components/message-alert.style";
+import { IoSearchOutline } from "react-icons/io5";
+import { SearchText, SearchForm } from "@Style-components/search.style";
 &nbsp;
-const MessageAlert = ({ counter }) =&gt; {
+const Search = () =&gt; {
   return (
-    &lt;AlertBubble role="alert" aria-label="8 message to read"&gt;
-      {counter}
-    &lt;/AlertBubble&gt;
+    &lt;SearchForm role="search"&gt;
+      &lt;IoSearchOutline className="form__icon" /&gt;
+      &lt;SearchText type="search" placeholder="Search" /&gt;
+    &lt;/SearchForm&gt;
   );
 };
 &nbsp;
-export default MessageAlert;
+export default Search;
 &nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>

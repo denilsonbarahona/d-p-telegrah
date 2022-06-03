@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile title to match snapshot 1`] = `
+<div>
+  <h2
+    class="sc-bczRLJ kjdqlF"
+  >
+    Testing
+  </h2>
+</div>
+`;
