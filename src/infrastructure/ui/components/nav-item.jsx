@@ -4,7 +4,7 @@ import { Anchor, Container } from "@Style-components/nav-item.style";
 
 const NavItem = ({ children, selected, to }) => {
   return (
-    <Anchor to={to}>
+    <Anchor aria-label={`go to ${to}`} to={to}>
       <Container className={`${selected ? "isSelected" : ""}`}>
         {children}
       </Container>
