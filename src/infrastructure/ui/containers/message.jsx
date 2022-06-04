@@ -2,36 +2,38 @@ import React from "react";
 import Profile from "@UI-components/profile-image";
 import MessageStatus from "@UI-components/message-status";
 import ProfileTitle from "@UI-components/profile-title";
+import PropTypes from "prop-types";
 import {
   MessageBody,
   MessageContainer,
   Article,
 } from "@Style-containers/message.style";
 
-const Message = () => {
+const Message = ({ name, image, message }) => {
   return (
     <MessageContainer>
-      <Profile
-        className="small"
-        name="denilson"
-        src="https://imgur.com/gallery/3snKn9E.png"
-      />
+      <Profile className="small" name={`${name}'s image`} src={image} />
       <MessageBody>
-        <ProfileTitle>Denilson Barahona</ProfileTitle>
-        <Article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat
-          cum commodi sunt quam, quaerat aliquid distinctio quas quod iure ad
-          sequi ea? Eligendi esse est animi magnam quae numquam? Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Illo, fugiat cum commodi
-          sunt quam, quaerat aliquid distinctio quas quod iure ad sequi ea?
-          Eligendi esse est animi magnam quae numquam?
-        </Article>
+        <ProfileTitle>{name}</ProfileTitle>
+        <Article> {message} </Article>
       </MessageBody>
       <div>
         <MessageStatus />
       </div>
     </MessageContainer>
   );
+};
+
+Message.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  message: PropTypes.string,
+};
+
+Message.defaultProps = {
+  name: "",
+  image: "",
+  message: "",
 };
 
 export default Message;
