@@ -4,7 +4,7 @@ import RoutesApp from "@Routes/route";
 
 const SideLayout = () => {
   return (
-    <Container>
+    <Container aria-label="side menu">
       <RoutesApp />
     </Container>
   );
