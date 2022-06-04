@@ -32,7 +32,7 @@ describe("AddContact", () => {
      * mocking the dialog component to show the dialog.
      */
     const showModal = jest.fn(OpenModalMock);
-    HTMLDialogElement.prototype["showModal"] = showModal;
+    HTMLDialogElement.prototype.showModal = showModal;
     const button = screen.queryByRole("button", {
       name: "click to add new contact",
     });
@@ -51,8 +51,8 @@ describe("AddContact", () => {
        */
       const showModal = jest.fn(OpenModalMock);
       closeModal = jest.fn(CloseModalMock);
-      HTMLDialogElement.prototype["showModal"] = showModal;
-      HTMLDialogElement.prototype["close"] = closeModal;
+      HTMLDialogElement.prototype.showModal = showModal;
+      HTMLDialogElement.prototype.close = closeModal;
     });
 
     it("should close dialog when close button is clicked", async () => {

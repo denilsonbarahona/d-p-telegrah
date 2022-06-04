@@ -3,7 +3,7 @@
 exports[`MessageAlert to match snapshot 1`] = `
 <div>
   <div
-    aria-label="8 message to read"
+    aria-label="8 messages without read"
     class="sc-bczRLJ ldMgCU"
     role="alert"
   >

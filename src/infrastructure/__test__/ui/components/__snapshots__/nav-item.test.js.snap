@@ -3,6 +3,7 @@
 exports[`Nav item to match snapshot 1`] = `
 <div>
   <a
+    aria-label="go to /"
     class="sc-bczRLJ tEisB"
     href="/"
   >

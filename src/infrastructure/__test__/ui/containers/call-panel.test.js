@@ -1,6 +1,6 @@
 import React from "react";
-import CallPanel from "../../../ui/containers/call-panel";
 import { render } from "@testing-library/react";
+import CallPanel from "../../../ui/containers/call-panel";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("call panel container", () => {

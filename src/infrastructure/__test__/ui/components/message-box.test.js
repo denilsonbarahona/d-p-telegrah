@@ -1,6 +1,6 @@
 import React from "react";
-import MessageBox from "../../../ui/components/message-box";
 import { render } from "@testing-library/react";
+import MessageBox from "../../../ui/components/message-box";
 
 describe("MessageBox", () => {
   it("rendering without crashing", () => {

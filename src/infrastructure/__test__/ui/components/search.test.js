@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "../../../ui/components/search";
 import { render } from "@testing-library/react";
+import Search from "../../../ui/components/search";
 
 describe("Search", () => {
   it("rendering without crashing", () => {
