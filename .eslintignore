@@ -1,0 +1,4 @@
+node_modules
+src/infrastructure/__mocks__
+src/infrastructure/__test__/ui/components/__snapshots__
+src/infrastructure/statics/images

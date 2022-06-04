@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parserOptions": {
@@ -34,8 +35,7 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "alias": true
-        /* "map": [
+        "map": [
           ["@", "./src"],
           ["@Routes", "./src/infrastructure/ui/routes"],
           ["@Redux", "./src/infrastructure/redux"],
@@ -47,7 +47,8 @@
           ["@Style-components", "./src/infrastructure/ui/styles/components"],
           ["@Style-containers", "./src/infrastructure/ui/styles/containers"],
           ["@Style-layouts", "./src/infrastructure/ui/styles/layouts"]
-        ] */
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
       }
     }
   }

@@ -89,6 +89,8 @@ module.exports = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
+    "\\.(webp|png|jpg|jpeg|gif|ico)$":
+      "<rootDir>/src/infrastructure/__mocks__/statics/images/mock-image.js",
     "^@/(.*)": "<rootDir>/src/$1",
     "^@Routes/(.*)": "<rootDir>/src/infrastructure/ui/routes/$1",
     "^@Redux/(.*)": "<rootDir>/src/infrastructure/redux/$1",
