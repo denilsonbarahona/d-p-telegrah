@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "telegrapho-fa483",
+  "private_key_id": "b0eb0847fa243259ea7519e8a3337c3705b7ffde",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvLjzEmPA8+7Sw\nXIehFOlKQSxY++EK60tLEjyWvJI+uwWJ30ZDI1pF3DBq/Zw7qDtXJ57MLTPpbqFD\nY88Ah8YgLAtWctu0o8F1RDcMyRlp08QFIka3PNeqTIqSbhvzZ4zUSjCk22VF5XBz\nGAAsOrtKIr5NU/qrZN0succxDzUKs//k5O3P7fvnqIRQC/48bI1AwIr0xSeEAIji\nO4TdniVPyXhM0fa1obEgL0G1XTCf1sUeToeJRL2IvnErGycE5CVjFPOsa8ixEGyU\nQJZ8yeakjuRDQ9NaS+R1etJ4iD6HO/CjjhYUprvoNwrLFq/FrhArwyl8COpJr6Yx\nj4tpisOBAgMBAAECggEACx1bx2z9NB9TwOtUAydCoH6XV9t+VS0l4TDaZYV4IXEI\nCk3/ZR/beMp+S3GFHb9gKXjW8VUuYaGOa4pL/lh+/HhS7VSbBkBsFDrEY+Qn/8AL\nBDjfI/3hIJnb4mvIS/aeV7NP2AvgBnHm4zSLAUNmMe9Xo+wfv8tl4ZI1dlJEzyWO\n1SH6hYBcGtdq5Cx4pZdKzNFBj739XFi/t09kC7loCzPWXHPgi7GvBrZ8t545gAjG\njhdVQf4zkxqHXEUiOrGHLUQCixWRCcL4jMBSyW7pDy3XFztJTR//w2ASUNQyVgL5\n/ERe1LDEFhsQHlfhJ3COHFmURHtXlPa1DrvGVu0QOQKBgQDj9w+CvCOxGxngGtfr\nIE6CvJIc0z2FOV5x7BbSgswa8LeSzVNf3Fiylct9Xd8bnT7INvlXxXSwuWjJTrJ9\nzrVAO6g/DbBbydfL9OWkGg6jP+LyUVP7pjQ9sUgK5+/JnsrjAwv1mLHio4vSYfSW\nHy1Z5Qb9qNrQuGVqQJBKD97RCQKBgQDEuWIYYy3wMSW16QIf7VqXKFgeM+d4h2hc\nHLNHC6Q96TVugONdlIJePnJsjLB1g74dbyebKZeDQJBaheqWvK6Lln50wTPTc8qs\nkWsXGBfpxTqjkxYYpVoUn6dSAKkhhtzuzFBYNpic+NdB1glIDzLZylwPIZ3K3fnZ\nt1XUCOkUuQKBgBJL5gbMKuEwF6eQ//tzIFoF4IRHwAxNSnNCS6KhtNgEsfcqW6K6\nALR0qVxqiFmjCULwhpqw0mjMuMhPdKv8RzfckehdpOX5EUThZv0AymP34LMqK99q\nu46oB+w4KVq5T/dgazlPBBf4oGRGUGcsIWuxohoBz24pHpqki/AlzfBhAoGATzcv\nLw7Q8sV3n/bB6kVTk0alpRPVg41TErRj5JnleyCraWHxLD+e94BB50AH1mpEZena\nkvp+jlWzSyBdxHEaAA+LwEwEKIOZ+z9bViNXjcTjxfZ2kVoUGfXoFHc7o8qAsJAJ\nUlw5vAvf8hzUA/ZKzbRUuasZtRUJhQf0QbuMz9ECgYEAyQ/wNS7KnhXM7hxby3wA\nqHygTkc8JTev8Cd2ISkF/4ZJWPZ0ZyjM6omCASkhZsb2LdtMvi3dWGzWBPAyO5+b\ny9yJXv7FmWJW1gco83l+Rb/QRs4CdE0xjaBgtLrfM1LZmFKeFnsOBgHA60xxoEq8\nWd63v2hZ7vidwnxSxLEMMz8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-wb6wt@telegrapho-fa483.iam.gserviceaccount.com",
+  "client_id": "113765565524232354490",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wb6wt%40telegrapho-fa483.iam.gserviceaccount.com"
+}
