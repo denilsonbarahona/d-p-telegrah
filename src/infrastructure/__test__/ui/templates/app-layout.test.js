@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import AppLayout from "@UI-layouts/app-layout";
+import AppLayout from "@template/appLayout";
 
 describe("AppLayout", () => {
   it("rendering without crashing", () => {

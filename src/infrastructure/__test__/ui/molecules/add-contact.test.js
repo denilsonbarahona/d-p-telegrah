@@ -1,11 +1,8 @@
 import React from "react";
-import AddContact from "@UI-components/add-contact";
+import AddContact from "@molecules/addContact";
 import reactDom from "react-dom";
 import { render, fireEvent, screen } from "@testing-library/react";
-import {
-  OpenModalMock,
-  CloseModalMock,
-} from "../../../__mocks__/components/Modal";
+import { OpenModalMock, CloseModalMock } from "../../../__mocks__/atoms/Modal";
 
 describe("AddContact", () => {
   beforeAll(() => {

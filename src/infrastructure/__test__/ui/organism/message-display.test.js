@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import MessageDisplay from "../../../ui/containers/message-display";
+import MessageDisplay from "@organism/messageDisplay";
 
 describe("MessageDisplay", () => {
   it("Render without crashing", () => {

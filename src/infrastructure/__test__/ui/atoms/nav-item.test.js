@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import NavItem from "../../../ui/components/nav-item";
+import NavItem from "@atoms/navItem";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("Nav item", () => {

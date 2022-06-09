@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import SidePanel from "@UI-containers/side-panel";
+import SidePanel from "@template/sidePanel";
 
 describe("SidePanel", () => {
   it("rendering without crashing", () => {
