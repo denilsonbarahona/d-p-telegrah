@@ -8,8 +8,10 @@ import App from "@/infrastructure/ui/App";
 const root = createRoot(document.querySelector("#root"));
 
 root.render(
-  <Provider store={Store}>
-    <GlobalStyle />
-    <App />
-  </Provider>
+  <React.StrictMode>
+    <Provider store={Store}>
+      <GlobalStyle />
+      <App />
+    </Provider>
+  </React.StrictMode>
 );
