@@ -4,18 +4,18 @@ import SidePanel from "@template/sidePanel";
 import AddContact from "@molecules/addContact";
 import Contact from "@molecules/contact";
 import Navigator from "@molecules/navigator";
-//import { getContact } from "../../../redux/slices/contact";
-//import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getContact } from "@Redux/features/contact/actions";
 
 const ContactPanel = () => {
-  // const contacts = useSelector((state) => state.contact);
-  // const dispatch = useDispatch();
-  // console.log(contacts);
-  /*
-  useEffect(() => {
-    dispatch(getContact());
+  const contacts = useSelector((state) => state.contact);
+  const dispatch = useDispatch();
+  console.log(contacts);
+
+  React.useEffect(() => {
+    dispatch(getContact("91sbarahona@gmail.com"));
   }, []);
-*/
+
   return (
     <>
       <SearchContainer />
