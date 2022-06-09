@@ -95,15 +95,12 @@ module.exports = {
     "^@Routes/(.*)": "<rootDir>/src/infrastructure/ui/routes/$1",
     "^@Redux/(.*)": "<rootDir>/src/infrastructure/redux/$1",
     "^@Images/(.*)": "<rootDir>/src/infrastructure/statics/images/$1",
-    "^@UI-components/(.*)": "<rootDir>/src/infrastructure/ui/components/$1",
-    "^@UI-containers/(.*)": "<rootDir>/src/infrastructure/ui/containers/$1",
-    "^@UI-layouts/(.*)": "<rootDir>/src/infrastructure/ui/layouts/$1",
+    "^@atoms/(.*)": "<rootDir>/src/infrastructure/ui/atoms/$1",
+    "^@molecules/(.*)": "<rootDir>/src/infrastructure/ui/molecules/$1",
+    "^@organism/(.*)": "<rootDir>/src/infrastructure/ui/organism/$1",
+    "^@template/(.*)": "<rootDir>/src/infrastructure/ui/templates/$1",
+    "^@pages/(.*)": "<rootDir>/src/infrastructure/ui/pages/$1",
     "^@Style/(.*)": "<rootDir>/src/infrastructure/ui/styles/$1",
-    "^@Style-components/(.*)":
-      "<rootDir>/src/infrastructure/ui/styles/components/$1",
-    "^@Style-containers/(.*)":
-      "<rootDir>/src/infrastructure/ui/styles/containers/$1",
-    "^@Style-layouts/(.*)": "<rootDir>/src/infrastructure/ui/styles/layouts/$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
