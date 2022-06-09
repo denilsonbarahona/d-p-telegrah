@@ -3,7 +3,10 @@ const contactService = require("../services/contacts.js");
 const getContact =
   ({ db }) =>
   async (req, res) => {
-    const contacts = await contactService(db.contact).getContacts();
+    const {
+      query: { email },
+    } = req;
+    const contacts = await contactService(db.contact).getContacts(email);
     res.status(200).json(contacts);
   };
 
