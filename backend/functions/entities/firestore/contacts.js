@@ -1,12 +1,15 @@
-const { doc } = require("prettier");
 const db = require("../../connections/firestore-connect");
+
 /**
  *
- * @param {*} req request parameter
- * @param {*} res response parameter
+ * @param {*} email email address
+ * @return {object} contact object
  */
-async function getContacts() {
-  const snapshot = await db.collection("contacts").get();
+async function getContacts(email) {
+  const snapshot = await db
+    .collection("contacts")
+    .where("owner", "==", email)
+    .get();
   return snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 }
 
