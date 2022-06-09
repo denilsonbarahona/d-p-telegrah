@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Tag from "../../../ui/components/tag";
+import Tag from "@atoms/tag";
 
 describe("tag component", () => {
   it("to match snapshot", () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Contact from "../../../ui/containers/contact";
+import Contact from "@molecules/contact";
 
 describe("Contact", () => {
   it("render without crashing", () => {

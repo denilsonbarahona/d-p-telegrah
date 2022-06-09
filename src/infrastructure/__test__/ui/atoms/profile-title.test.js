@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ProfileTitle from "../../../ui/components/profile-title";
+import ProfileTitle from "@atoms/profileTitle";
 
 describe("profile title", () => {
   it("to match snapshot", () => {

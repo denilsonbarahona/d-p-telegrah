@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Profile from "../../../ui/components/profile-image";
+import Profile from "@atoms/profileImage";
 
 describe("Profile Image", () => {
   let Image;

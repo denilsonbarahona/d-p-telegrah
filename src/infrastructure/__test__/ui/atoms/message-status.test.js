@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import MessageStatus from "../../../ui/components/message-status";
+import MessageStatus from "@atoms/messageStatus";
 
 describe("describe", () => {
   it("rendering without crashing", () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Navigator from "../../../ui/containers/navigator";
+import Navigator from "@molecules/navigator";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("Navigator", () => {

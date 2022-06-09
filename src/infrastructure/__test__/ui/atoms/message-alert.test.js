@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import MessageAlert from "@UI-components/message-alert";
+import MessageAlert from "@atoms/messageAlert";
 
 describe("MessageAlert", () => {
   it("rendering without crashing", () => {

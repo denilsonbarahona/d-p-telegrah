@@ -1,5 +1,5 @@
 import React from "react";
-import Preference from "@UI-components/color-preference";
+import Preference from "@atoms/colorPreference";
 import { render } from "@testing-library/react";
 
 describe("Preferences", () => {

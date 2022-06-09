@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import SideLayout from "@UI-layouts/side-layout";
+import SideLayout from "@template/sideLayout";
 import reactDom from "react-dom";
 
 describe("SideLayout", () => {

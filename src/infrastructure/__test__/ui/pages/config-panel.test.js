@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ConfigPanel from "../../../ui/containers/config-panel";
+import ConfigPanel from "@pages/configPanel";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("config-panel container", () => {

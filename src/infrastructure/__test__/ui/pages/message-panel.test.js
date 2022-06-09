@@ -1,14 +1,12 @@
 import React from "react";
 import reactDom from "react-dom";
 import { render } from "@testing-library/react";
-import ContactPanel from "../../../ui/containers/contact-panel";
+import MessagePanel from "@pages/messagePanel";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
-describe("contact-panel container", () => {
+describe("MessagePanel", () => {
   beforeAll(() => {
-    reactDom.createPortal = jest.fn((element) => {
-      return element;
-    });
+    reactDom.createPortal = jest.fn((element) => element);
   });
 
   afterAll(() => {
@@ -18,7 +16,7 @@ describe("contact-panel container", () => {
   it("rendering without crashing", () => {
     const { getByRole } = render(
       <RouterMock>
-        <ContactPanel />
+        <MessagePanel />
       </RouterMock>
     );
     expect(getByRole("search")).toBeInTheDocument();
