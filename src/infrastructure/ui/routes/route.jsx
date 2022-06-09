@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ContactPanel from "@UI-containers/contact-panel";
-import CallPanel from "@UI-containers/call-panel";
-import MessagePanel from "@UI-containers/message-panel";
-import ConfigPanel from "@UI-containers/config-panel";
+import ContactPanel from "@pages/contactPanel";
+import CallPanel from "@pages/callPanel";
+import MessagePanel from "@pages/messagePanel";
+import ConfigPanel from "@pages/configPanel";
 
 const RoutesApp = () => {
   return (

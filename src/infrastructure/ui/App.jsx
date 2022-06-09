@@ -1,7 +1,7 @@
 import React from "react";
-import MessageDisplay from "@UI-containers/message-display";
-import AppLayout from "@UI-layouts/app-layout";
-import SideLayout from "@UI-layouts/side-layout";
+import MessageDisplay from "@organism/messageDisplay";
+import AppLayout from "@template/appLayout";
+import SideLayout from "@template/sideLayout";
 
 const App = () => {
   return (
