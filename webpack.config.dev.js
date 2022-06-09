@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DotEnv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -14,28 +15,12 @@ module.exports = {
       "@Routes": path.resolve(__dirname, "src/infrastructure/ui/routes"),
       "@Redux": path.resolve(__dirname, "src/infrastructure/redux"),
       "@Images": path.resolve(__dirname, "src/infrastructure/statics/images"),
-      "@UI-components": path.resolve(
-        __dirname,
-        "src/infrastructure/ui/components"
-      ),
-      "@UI-containers": path.resolve(
-        __dirname,
-        "src/infrastructure/ui/containers"
-      ),
-      "@UI-layouts": path.resolve(__dirname, "src/infrastructure/ui/layouts"),
+      "@atoms": path.resolve(__dirname, "src/infrastructure/ui/atoms"),
+      "@molecules": path.resolve(__dirname, "src/infrastructure/ui/molecules"),
+      "@organism": path.resolve(__dirname, "src/infrastructure/ui/organism"),
+      "@template": path.resolve(__dirname, "src/infrastructure/ui/templates"),
+      "@pages": path.resolve(__dirname, "src/infrastructure/ui/pages"),
       "@Style": path.resolve(__dirname, "src/infrastructure/ui/styles"),
-      "@Style-components": path.resolve(
-        __dirname,
-        "src/infrastructure/ui/styles/components"
-      ),
-      "@Style-containers": path.resolve(
-        __dirname,
-        "src/infrastructure/ui/styles/containers"
-      ),
-      "@Style-layouts": path.resolve(
-        __dirname,
-        "src/infrastructure/ui/styles/layouts"
-      ),
     },
   },
   mode: "development",
@@ -63,6 +48,7 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
+    new DotEnv(),
   ],
   devServer: {
     compress: true,
