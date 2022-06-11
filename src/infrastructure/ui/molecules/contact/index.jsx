@@ -13,7 +13,7 @@ import {
 
 const Contact = ({ name, titleClassName, src, paragraph, showStatus }) => {
   return (
-    <ContactContainer>
+    <ContactContainer tabIndex="0">
       <Profile name={name} src={src} />
       <div>
         <ContactContent>

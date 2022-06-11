@@ -1,5 +1,8 @@
 import React from "react";
 import { IoPersonAddOutline, IoCloseOutline } from "react-icons/io5";
+import Modal from "@atoms/modal";
+import { createContact } from "@Redux/features/contact/actions";
+import { useDispatch } from "react-redux";
 import {
   AddContainer,
   ModalTitle,
@@ -9,9 +12,10 @@ import {
   Button,
   CloseButton,
 } from "./add-contact.style";
-import Modal from "@atoms/modal";
 
 const AddContact = () => {
+  const dispatch = useDispatch();
+
   const showModalPlain = (event) => {
     event.stopPropagation();
     const $modal = document.querySelector("#dialog");
@@ -22,6 +26,20 @@ const AddContact = () => {
     event.stopPropagation();
     const $modal = document.querySelector("#dialog");
     if (typeof $modal.close === "function") $modal.close();
+  };
+
+  const onSubmitForm = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const name = data.get("name");
+    const email = data.get("email");
+    dispatch(
+      createContact({
+        name,
+        email,
+        owner: "91sbarahona@gmail.com",
+      })
+    );
   };
 
   return (
@@ -44,14 +62,10 @@ const AddContact = () => {
             <IoCloseOutline aria-hidden className="modal__close" />
           </CloseButton>
         </ModalTitleContainer>
-        <Form>
-          <Input type="text" placeholder="Name" />
-          <Input type="text" placeholder="Email" />
-          <Button
-            aria-label="save new contact"
-            type="button"
-            onClick={hideModal}
-          >
+        <Form onSubmit={onSubmitForm}>
+          <Input type="text" name="name" placeholder="Name" />
+          <Input type="text" name="email" placeholder="Email" />
+          <Button aria-label="save new contact" type="submit">
             Add
           </Button>
         </Form>

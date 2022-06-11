@@ -6,18 +6,28 @@ export const getContact = createAsyncThunk(
     const {
       extra: { contact },
     } = thunkAPI;
-    try {
-      const response = await contact.getMyContacts(email);
-      if (response.failing) {
-        return thunkAPI.rejectWithValue(response.message);
-      }
-      return thunkAPI.fulfillWithValue(response.data);
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+    const response = await contact.getMyContacts(email, thunkAPI.signal);
+    if (response.failing) {
+      return thunkAPI.rejectWithValue(response.message);
     }
+    return thunkAPI.fulfillWithValue(response.data);
   }
 );
 
-export const addContact = (state) => {
+export const createContact = createAsyncThunk(
+  "contact/createContact",
+  async (contactData, thunkAPI) => {
+    const {
+      extra: { contact },
+    } = thunkAPI;
+    const response = await contact.createContact(contactData, thunkAPI.signal);
+    if (response.failing) {
+      return thunkAPI.rejectWithValue(response.message);
+    }
+    return thunkAPI.fulfillWithValue(response);
+  }
+);
+
+export const updateContact = (state) => {
   state.contacts.push(state.contact);
 };
