@@ -1,13 +1,17 @@
 import React from "react";
-import Search from "@atoms/search";
+import PropTypes from "prop-types";
 import Container from "./search-container.style";
 
-const SearchContainer = () => {
-  return (
-    <Container>
-      <Search />
-    </Container>
-  );
+const SearchContainer = ({ children }) => {
+  return <Container>{children}</Container>;
+};
+
+SearchContainer.propTypes = {
+  children: PropTypes.node,
+};
+
+SearchContainer.defaultProps = {
+  children: null,
 };
 
 export default SearchContainer;

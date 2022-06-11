@@ -1,24 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getContact, addContact as newContact } from "./actions";
-import getContactReducer from "./reducer";
+import { getContact, createContact } from "./actions";
+import { getContactReducer, createContactReducer } from "./reducer";
 
 const initialState = {
   loading: false,
-  error: "",
   contacts: [],
 };
 
 export const contactSlice = createSlice({
   name: "contact",
   initialState,
-  reducers: {
-    addContact: newContact,
-  },
+  reducers: {},
   extraReducers: {
     ...getContactReducer(getContact),
+    ...createContactReducer(createContact),
   },
 });
 
-export const { addContact } = contactSlice.actions;
+/* export const { addContact } = contactSlice.actions; */
 
 export const contactReducer = contactSlice.reducer;
