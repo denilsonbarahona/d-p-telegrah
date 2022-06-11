@@ -9,8 +9,7 @@
     "lint": "eslint -c .eslintrc.json src/**",
     "lint:fix": "eslint -c .eslintrc.json src/ --fix",
     "format": "prettier --write \"src/\"",
-    "test": "jest",
-    "prepare": "husky install"
+    "test": "jest"
   },
   "keywords": [
     "React",
@@ -37,6 +36,7 @@
     "@babel/plugin-transform-runtime": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
     "@babel/preset-react": "^7.17.12",
+    "@faker-js/faker": "^7.2.0",
     "@testing-library/react": "^13.2.0",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
