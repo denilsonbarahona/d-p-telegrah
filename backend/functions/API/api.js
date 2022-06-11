@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const contactController = require("../controllers/contacts.js");
+const usersController = require("../controllers/users.js");
 const db = require("../entities/firestore");
 const app = express();
 app.use(cors());
 
-app.get("/api/contacts", contactController.getContact({ db }));
-app.get("/api/contacts/:id", contactController.getContactById({ db }));
-app.post("/api/contacts", contactController.createContact({ db }));
+app.get("/api/users", usersController.getUsers({ db }));
+app.get("/api/users/:id", usersController.getUserById({ db }));
+app.post("/api/users", usersController.createUser({ db }));
 
 module.exports = app;
