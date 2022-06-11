@@ -5,10 +5,10 @@ const db = require("../../connections/firestore-connect");
  */
 async function getUserByEmail(email) {
   const snapshot = await db
-    .collection("users")
-    .where("email", "==", email)
-    .get();
-  return snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))[0];
+      .collection("users")
+      .where("email", "==", email)
+      .get();
+  return snapshot.docs.map((doc) => ({...doc.data(), id: doc.id}))[0];
 }
 /**
  *
@@ -16,10 +16,10 @@ async function getUserByEmail(email) {
  * @return {object} user object
  */
 async function getUsers(email) {
-  const { contacts } = await getUserByEmail(email);
+  const {contacts} = await getUserByEmail(email);
   const users = contacts.map(async (item) => {
     const user = await getUserById(item.id);
-    return { ...user, ...item, contacts: [] };
+    return {...user, ...item, contacts: []};
   });
 
   return await Promise.all(users);
@@ -32,7 +32,7 @@ async function getUsers(email) {
  */
 async function getUserById(id) {
   const snapshot = await db.collection("users").doc(id).get();
-  return { ...snapshot.data(), id: snapshot.id };
+  return {...snapshot.data(), id: snapshot.id};
 }
 
 /**
@@ -43,10 +43,10 @@ async function getUserById(id) {
 async function createUser(contact) {
   const userToAdd = await getUserByEmail(contact.email);
   if (userToAdd) {
-    const { contacts, id } = await getUserByEmail(contact.owner);
-    const newContacts = [...contacts, { id, name: contact.name }];
-    db.collection("users").doc(id).update({ contacts: newContacts });
-    return { ...userToAdd, contacts: [], name: contact.name };
+    const {contacts, id} = await getUserByEmail(contact.owner);
+    const newContacts = [...contacts, {id, name: contact.name}];
+    db.collection("users").doc(id).update({contacts: newContacts});
+    return {...userToAdd, contacts: [], name: contact.name};
   }
   return userToAdd;
 }
