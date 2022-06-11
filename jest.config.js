@@ -100,6 +100,7 @@ module.exports = {
     "^@organism/(.*)": "<rootDir>/src/infrastructure/ui/organism/$1",
     "^@template/(.*)": "<rootDir>/src/infrastructure/ui/templates/$1",
     "^@pages/(.*)": "<rootDir>/src/infrastructure/ui/pages/$1",
+    "^@API/(.*)":  "<rootDir>/src/infrastructure/api/$1",
     "^@Style/(.*)": "<rootDir>/src/infrastructure/ui/styles/$1",
   },
 

@@ -46,6 +46,7 @@
           ["@organism", "./src/infrastructure/ui/organism"],
           ["@template", "./src/infrastructure/ui/templates"],
           ["@pages", "./src/infrastructure/ui/pages"],
+          ["@API", "./src/infrastructure/api"],
           ["@Style", "./src/infrastructure/ui/styles"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]

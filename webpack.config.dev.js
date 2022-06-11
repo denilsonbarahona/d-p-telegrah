@@ -20,6 +20,7 @@ module.exports = {
       "@organism": path.resolve(__dirname, "src/infrastructure/ui/organism"),
       "@template": path.resolve(__dirname, "src/infrastructure/ui/templates"),
       "@pages": path.resolve(__dirname, "src/infrastructure/ui/pages"),
+      "@API": path.resolve(__dirname, "src/infrastructure/api"),
       "@Style": path.resolve(__dirname, "src/infrastructure/ui/styles"),
     },
   },
