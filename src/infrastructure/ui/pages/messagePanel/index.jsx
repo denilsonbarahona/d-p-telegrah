@@ -1,6 +1,7 @@
 import React from "react";
-import SearchContainer from "@molecules/searchContainer";
+import Search from "@atoms/search";
 import SidePanel from "@template/sidePanel";
+import SearchContainer from "@molecules/searchContainer";
 import AddContact from "@molecules/addContact";
 import Contact from "@molecules/contact";
 import Navigator from "@molecules/navigator";
@@ -8,7 +9,9 @@ import Navigator from "@molecules/navigator";
 const MessagePanel = () => {
   return (
     <>
-      <SearchContainer />
+      <SearchContainer>
+        <Search />
+      </SearchContainer>
       <SidePanel>
         <AddContact />
         <Contact
