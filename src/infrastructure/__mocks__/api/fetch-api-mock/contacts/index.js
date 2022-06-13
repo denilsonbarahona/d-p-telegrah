@@ -5,7 +5,7 @@ export const getContact =()=>({
     "image": faker.image.avatar(),
     "email": faker.internet.email(),
     "name": faker.name.findName(),
-    "lastSeen": faker.date.recent(),
+    "lastSeen": faker.date.recent().toDateString(),
     "id": faker.datatype.uuid(),
 })
 

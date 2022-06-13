@@ -24,6 +24,7 @@ export const createContactReducer = (createContact) => {
         payload: { data, status },
       } = action;
       if (status === 200) state.contacts.push(data);
+      if (status === 500) state.error = "Error creating contact";
       if (status === 404) console.log("showing error");
       state.loading = false;
     },

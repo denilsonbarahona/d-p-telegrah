@@ -1,15 +1,18 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import {screen, render } from "@testing-library/react";
 import Navigator from "@molecules/navigator";
+import { act } from "react-dom/test-utils";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("Navigator", () => {
   it("rendering without crashing", () => {
-    const { queryByRole } = render(
-      <RouterMock>
-        <Navigator />
-      </RouterMock>
-    );
-    expect(queryByRole("navigation")).toBeInTheDocument();
+    act(()=>{
+      render(
+        <RouterMock>
+          <Navigator />
+        </RouterMock>
+      );
+    });
+    expect(screen.queryByRole("navigation")).toBeInTheDocument();
   });
 });

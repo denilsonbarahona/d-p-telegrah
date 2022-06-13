@@ -3,6 +3,7 @@ import AddContact from "@molecules/addContact";
 import reactDom from "react-dom";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { OpenModalMock, CloseModalMock } from "../../../__mocks__/atoms/Modal";
+import ProviderMock from "../../../__mocks__/redux/providerMock";
 
 describe("AddContact", () => {
   beforeAll(() => {
@@ -16,7 +17,7 @@ describe("AddContact", () => {
   });
 
   it("rendering without crashing", () => {
-    const { queryByRole } = render(<AddContact />);
+    const { queryByRole } = render(<ProviderMock><AddContact /></ProviderMock>);
     const button = queryByRole("button", {
       name: "click to add new contact",
     });
@@ -24,7 +25,7 @@ describe("AddContact", () => {
   });
 
   it("should open dialog when button is clicked", async () => {
-    render(<AddContact />);
+    render(<ProviderMock><AddContact /></ProviderMock>);
     /**
      * mocking the dialog component to show the dialog.
      */
@@ -42,7 +43,7 @@ describe("AddContact", () => {
   describe("testing when form is open", () => {
     let closeModal;
     beforeAll(() => {
-      render(<AddContact />);
+      render(<ProviderMock><AddContact /></ProviderMock>);
       /**
        * mocking the dialog component to show and close the dialog.
        */
