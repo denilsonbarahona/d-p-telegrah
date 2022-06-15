@@ -30,7 +30,6 @@ const ContactPanel = () => {
     setContactState(filtered);
   };
 
-
   return (
     <>
       <SearchContainer>
@@ -38,7 +37,7 @@ const ContactPanel = () => {
       </SearchContainer>
       <SidePanel>
         <AddContact />
-         {contactState.map((contact) => (
+        {contactState.map((contact) => (
           <Contact
             key={contact.id}
             name={contact.name}

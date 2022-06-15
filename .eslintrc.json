@@ -38,6 +38,7 @@
       "alias": {
         "map": [
           ["@", "./src"],
+          ["@domain", ".src/domain"],
           ["@Routes", "./src/infrastructure/ui/routes"],
           ["@Redux", "./src/infrastructure/redux"],
           ["@Images", "./src/infrastructure/statics/images"],

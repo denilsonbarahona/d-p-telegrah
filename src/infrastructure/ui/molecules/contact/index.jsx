@@ -3,15 +3,9 @@ import PropTypes from "prop-types";
 import Profile from "@atoms/profileImage";
 import ProfileTitle from "@atoms/profileTitle";
 import ProfileParagraph from "@atoms/profileParagraph";
-import MessageStatus from "@atoms/messageStatus";
-import MessageAlert from "@atoms/messageAlert";
-import {
-  ContactContainer,
-  ContactContent,
-  ContactNotification,
-} from "./contact.style";
+import { ContactContainer, ContactContent } from "./contact.style";
 
-const Contact = ({ name, titleClassName, src, paragraph, showStatus }) => {
+const Contact = ({ name, titleClassName, src, paragraph, children }) => {
   return (
     <ContactContainer tabIndex="0">
       <Profile name={name} src={src} />
@@ -23,12 +17,7 @@ const Contact = ({ name, titleClassName, src, paragraph, showStatus }) => {
           </ProfileParagraph>
         </ContactContent>
       </div>
-      {showStatus && (
-        <ContactNotification>
-          <MessageStatus />
-          <MessageAlert />
-        </ContactNotification>
-      )}
+      {children}
     </ContactContainer>
   );
 };
@@ -38,7 +27,7 @@ Contact.propTypes = {
   titleClassName: PropTypes.string,
   src: PropTypes.string,
   paragraph: PropTypes.string,
-  showStatus: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 Contact.defaultProps = {
@@ -46,7 +35,7 @@ Contact.defaultProps = {
   titleClassName: "",
   src: "",
   paragraph: "",
-  showStatus: false,
+  children: null,
 };
 
 export default Contact;
