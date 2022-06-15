@@ -92,6 +92,7 @@ module.exports = {
     "\\.(webp|png|jpg|jpeg|gif|ico)$":
       "<rootDir>/src/infrastructure/__mocks__/statics/images/mock-image.js",
     "^@/(.*)": "<rootDir>/src/$1",
+    "^@domain/(.*)": "<rootDir>/src/domain/$1",
     "^@Routes/(.*)": "<rootDir>/src/infrastructure/ui/routes/$1",
     "^@Redux/(.*)": "<rootDir>/src/infrastructure/redux/$1",
     "^@Images/(.*)": "<rootDir>/src/infrastructure/statics/images/$1",

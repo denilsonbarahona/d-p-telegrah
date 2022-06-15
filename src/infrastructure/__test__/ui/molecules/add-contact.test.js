@@ -17,7 +17,11 @@ describe("AddContact", () => {
   });
 
   it("rendering without crashing", () => {
-    const { queryByRole } = render(<ProviderMock><AddContact /></ProviderMock>);
+    const { queryByRole } = render(
+      <ProviderMock>
+        <AddContact />
+      </ProviderMock>
+    );
     const button = queryByRole("button", {
       name: "click to add new contact",
     });
@@ -25,7 +29,11 @@ describe("AddContact", () => {
   });
 
   it("should open dialog when button is clicked", async () => {
-    render(<ProviderMock><AddContact /></ProviderMock>);
+    render(
+      <ProviderMock>
+        <AddContact />
+      </ProviderMock>
+    );
     /**
      * mocking the dialog component to show the dialog.
      */
@@ -43,7 +51,11 @@ describe("AddContact", () => {
   describe("testing when form is open", () => {
     let closeModal;
     beforeAll(() => {
-      render(<ProviderMock><AddContact /></ProviderMock>);
+      render(
+        <ProviderMock>
+          <AddContact />
+        </ProviderMock>
+      );
       /**
        * mocking the dialog component to show and close the dialog.
        */

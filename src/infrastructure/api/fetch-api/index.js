@@ -1,7 +1,7 @@
 import contact from "./contacts";
-import message from "./message";
+import chats from "./chats";
 
 export default {
   contact,
-  message,
+  chats,
 };

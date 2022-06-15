@@ -15,6 +15,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
     alias: {
       "@": path.resolve(__dirname, "src"),
+      "@domain": path.resolve(__dirname, "src/domain"),
       "@Routes": path.resolve(__dirname, "src/infrastructure/ui/routes"),
       "@Redux": path.resolve(__dirname, "src/infrastructure/redux"),
       "@Images": path.resolve(__dirname, "src/infrastructure/statics/images"),
