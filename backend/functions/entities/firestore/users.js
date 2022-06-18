@@ -1,4 +1,5 @@
 const db = require("../../connections/firestore-connect");
+const {getChatsByParticipants} = require("./chats");
 /**
  *
  * @param {*} email email address
@@ -16,10 +17,12 @@ async function getUserByEmail(email) {
  * @return {object} user object
  */
 async function getUsers(email) {
-  const {contacts} = await getUserByEmail(email);
+  const {contacts, id, name} = await getUserByEmail(email);
   const users = contacts.map(async (item) => {
     const user = await getUserById(item.id);
-    return {...user, ...item, contacts: []};
+    const chatId = await getChatsByParticipants([{id: item.id, name: item.name},
+      {id, name}]);
+    return {...user, ...item, chatId: chatId[0], contacts: []};
   });
 
   return await Promise.all(users);
