@@ -12,4 +12,6 @@ app.post("/api/users", usersController.createUser({db}));
 
 app.get("/api/chats/:id/:name", chatController.getChat({db}));
 
+app.get("/api/messages/:id/:page", chatController.getMessageFromChat({db}));
+
 module.exports = app;

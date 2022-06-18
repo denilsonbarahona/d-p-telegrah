@@ -6,6 +6,13 @@ const getChat = ({db}) => async (req, res) =>{
   res.status(200).json(chats);
 };
 
+const getMessageFromChat =({db}) => async (req, res) =>{
+  const {params: {id, page}} = req;
+  const messages = await chatService(db.chats).getMessageFromChat(id, page);
+  res.status(200).json(messages);
+};
+
 module.exports = {
   getChat,
+  getMessageFromChat,
 };
