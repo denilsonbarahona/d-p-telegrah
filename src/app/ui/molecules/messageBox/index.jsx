@@ -1,5 +1,4 @@
 import React from "react";
-import { IconContext } from "react-icons";
 import { IoAttachOutline, IoHappyOutline, IoMicOutline } from "react-icons/io5";
 import {
   MessageContainer,
@@ -12,16 +11,14 @@ const MessageBox = () => {
   return (
     <MessageContainer>
       <Button type="button">
-        <IconContext.Provider value={{ size: "20px" }}>
-          <IoAttachOutline />
-        </IconContext.Provider>
+        <IoAttachOutline />
       </Button>
       <TextArea placeholder="Write a message" />
       <MessageAction>
-        <IconContext.Provider value={{ size: "20px" }}>
+        <>
           <IoHappyOutline />
           <IoMicOutline />
-        </IconContext.Provider>
+        </>
       </MessageAction>
     </MessageContainer>
   );
