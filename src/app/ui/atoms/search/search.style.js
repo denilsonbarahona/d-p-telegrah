@@ -7,6 +7,7 @@ export const SearchForm = Styled.form`
         inset-inline-start: 0.5rem;
         inset-block-start: 50%;
         transform: translateY(-50%);
+        color: var(${props => props.theme.BaseTextColor});
     }
 `;
 
@@ -17,4 +18,6 @@ export const SearchText = Styled.input`
     border: none;
     border-radius: 50px; 
     inline-size: 100%;
+    color: var(${props => props.theme.BaseTextColor});
+    background-color: var(${props => props.theme.background});
 `;

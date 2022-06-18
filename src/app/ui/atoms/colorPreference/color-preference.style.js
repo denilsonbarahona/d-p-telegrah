@@ -10,7 +10,7 @@ const Button = styled.button`
   background-color: transparent;
   border: none;
   max-inline-size: auto;
-
+  color: var(${props => props.theme.BaseTextColor});
   & .selected {
     border-radius: 0.5rem;
     border: 4px solid var(--light-blue);
