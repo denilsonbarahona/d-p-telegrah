@@ -90,19 +90,20 @@ module.exports = {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     "\\.(webp|png|jpg|jpeg|gif|ico)$":
-      "<rootDir>/src/infrastructure/__mocks__/statics/images/mock-image.js",
+      "<rootDir>/src/app/__mocks__/statics/images/mock-image.js",
     "^@/(.*)": "<rootDir>/src/$1",
     "^@domain/(.*)": "<rootDir>/src/domain/$1",
-    "^@Routes/(.*)": "<rootDir>/src/infrastructure/ui/routes/$1",
-    "^@Redux/(.*)": "<rootDir>/src/infrastructure/redux/$1",
-    "^@Images/(.*)": "<rootDir>/src/infrastructure/statics/images/$1",
-    "^@atoms/(.*)": "<rootDir>/src/infrastructure/ui/atoms/$1",
-    "^@molecules/(.*)": "<rootDir>/src/infrastructure/ui/molecules/$1",
-    "^@organism/(.*)": "<rootDir>/src/infrastructure/ui/organism/$1",
-    "^@template/(.*)": "<rootDir>/src/infrastructure/ui/templates/$1",
-    "^@pages/(.*)": "<rootDir>/src/infrastructure/ui/pages/$1",
-    "^@API/(.*)":  "<rootDir>/src/infrastructure/api/$1",
-    "^@Style/(.*)": "<rootDir>/src/infrastructure/ui/styles/$1",
+    "^@context/(.*)": "<rootDir>/src/app/ui/context/$1",
+    "^@Routes/(.*)": "<rootDir>/src/app/ui/routes/$1",
+    "^@Redux/(.*)": "<rootDir>/src/app/redux/$1",
+    "^@Images/(.*)": "<rootDir>/src/app/statics/images/$1",
+    "^@atoms/(.*)": "<rootDir>/src/app/ui/atoms/$1",
+    "^@molecules/(.*)": "<rootDir>/src/app/ui/molecules/$1",
+    "^@organism/(.*)": "<rootDir>/src/app/ui/organism/$1",
+    "^@template/(.*)": "<rootDir>/src/app/ui/templates/$1",
+    "^@pages/(.*)": "<rootDir>/src/app/ui/pages/$1",
+    "^@API/(.*)":  "<rootDir>/src/app/api/$1",
+    "^@Style/(.*)": "<rootDir>/src/app/ui/styles/$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

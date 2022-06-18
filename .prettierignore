@@ -1,4 +1,4 @@
 node_modules
-src/infrastructure/__mocks__/
-src/infrastructure/__test__/ui/atoms/__snapshots__
-src/infrastructure/statics/images
+src/app/__mocks__/
+src/app/__test__/ui/atoms/__snapshots__
+src/app/statics/images

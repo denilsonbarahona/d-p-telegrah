@@ -38,17 +38,18 @@
       "alias": {
         "map": [
           ["@", "./src"],
-          ["@domain", ".src/domain"],
-          ["@Routes", "./src/infrastructure/ui/routes"],
-          ["@Redux", "./src/infrastructure/redux"],
-          ["@Images", "./src/infrastructure/statics/images"],
-          ["@atoms", "./src/infrastructure/ui/atoms"],
-          ["@molecules", "./src/infrastructure/ui/molecules"],
-          ["@organism", "./src/infrastructure/ui/organism"],
-          ["@template", "./src/infrastructure/ui/templates"],
-          ["@pages", "./src/infrastructure/ui/pages"],
-          ["@API", "./src/infrastructure/api"],
-          ["@Style", "./src/infrastructure/ui/styles"]
+          ["@domain", "./src/domain"],
+          ["@context", "./src/app/ui/context"],
+          ["@Routes", "./src/app/ui/routes"],
+          ["@Redux", "./src/app/redux"],
+          ["@Images", "./src/app/statics/images"],
+          ["@atoms", "./src/app/ui/atoms"],
+          ["@molecules", "./src/app/ui/molecules"],
+          ["@organism", "./src/app/ui/organism"],
+          ["@template", "./src/app/ui/templates"],
+          ["@pages", "./src/app/ui/pages"],
+          ["@API", "./src/app/api"],
+          ["@Style", "./src/app/ui/styles"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }
