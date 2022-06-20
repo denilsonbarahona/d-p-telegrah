@@ -1,4 +1,4 @@
-const db = require("../../connections/firestore-connect");
+const {db, fire} = require("../../connections/firestore-connect");
 const groupingMessages = require("../../utils/grouping-messages");
 const {formattingChat} = require("../../utils/formating-chats");
 /**
@@ -44,8 +44,43 @@ async function getMessageFromChat(chatId, page) {
   return groupingMessages(snapshot.data().messages.slice(0, page*100));
 }
 
+/**
+ * @param {*} chatId id of chat
+ * @param {*} messageObject message object to register
+ */
+async function addMessageToChat(chatId, messageObject) {
+  messageObject.time = fire.Timestamp.fromDate(new Date());
+  await db.collection("chats")
+      .doc(chatId)
+      .update({
+        messages: fire.FieldValue.arrayUnion(messageObject),
+      });
+  return getMessageFromChat(chatId, 1);
+}
+
+/**
+ * @param {*} participants array of participants in the chat
+ * @param {*} message object of message to register
+ * @return {object} array of messages
+ */
+async function createChat(participants, message) {
+  message[0]["time"] = fire.Timestamp.fromDate(new Date());
+  const chatId = db.collection("chats").doc().id;
+  await db.collection("chats")
+      .doc(chatId)
+      .set({
+        createdAt: fire.Timestamp.fromDate(new Date()),
+        participants,
+        messages: message,
+      });
+  return getMessageFromChat(chatId, 1);
+}
+
+
 module.exports = {
   getChats,
   getMessageFromChat,
   getChatsByParticipants,
+  addMessageToChat,
+  createChat,
 };
