@@ -20,6 +20,7 @@ function setGroupMessage(messagesList) {
  */
 function groupingMessages(messagesList) {
   const grouped = [];
+  group.clear();
   const Messages = setGroupMessage(messagesList);
   for (const item of group) {
     grouped.push({tag: item,

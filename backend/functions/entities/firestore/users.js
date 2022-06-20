@@ -1,4 +1,4 @@
-const db = require("../../connections/firestore-connect");
+const {db} = require("../../connections/firestore-connect");
 const {getChatsByParticipants} = require("./chats");
 /**
  *
