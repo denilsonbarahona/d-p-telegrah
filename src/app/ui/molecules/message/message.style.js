@@ -13,5 +13,5 @@ export const MessageBody = styled.div`
 
 export const Article = styled.article`
   font: var(--body-16regular);
-  color: var(${props => props.theme.BaseTextColor});
+  color: var(${(props) => props.theme.BaseTextColor});
 `;
