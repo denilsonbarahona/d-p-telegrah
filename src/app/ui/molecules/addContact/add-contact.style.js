@@ -28,7 +28,7 @@ export const ModalTitleContainer = styled.div`
 export const ModalTitle = styled.h3`
   font: var(--body-16bold);
   margin: 0;
-  color: var(${props=>props.theme.BaseTextColor});
+  color: var(${(props) => props.theme.BaseTextColor});
 `;
 
 export const Form = styled.form`
@@ -41,14 +41,14 @@ export const Input = styled.input`
   border: none;
   border-block-end: 1px solid var(${(props) => props.theme.divider});
   padding: 0.25rem;
-  background-color: var(${props=>props.theme.background});
-  color: var(${props=>props.theme.BaseTextColor});
+  background-color: var(${(props) => props.theme.background});
+  color: var(${(props) => props.theme.BaseTextColor});
 `;
 
 export const CloseButton = styled.button`
   border: none;
   background: transparent;
-  color: var(${props=>props.theme.BaseTextColor});
+  color: var(${(props) => props.theme.BaseTextColor});
 `;
 
 export const Button = styled.button`

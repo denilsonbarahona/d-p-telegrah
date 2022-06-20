@@ -39,6 +39,7 @@ const ContactPanel = () => {
         <AddContact />
         {contactState.map((contact) => (
           <Contact
+            contactId={contact.id}
             key={contact.id}
             chatId={contact.chatId}
             name={contact.name}

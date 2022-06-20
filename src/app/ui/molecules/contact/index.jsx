@@ -10,18 +10,19 @@ import { ContactContainer, ContactContent } from "./contact.style";
 
 const Contact = ({
   chatId,
+  contactId,
   name,
-  titleClassName,
   src,
   paragraph,
   children,
+  titleClassName,
 }) => {
   const dispatch = useDispatch();
-  const context = useContext(UIChanges);
+  const { setShowDisplay } = useContext(UIChanges);
 
   const handleOnClick = () => {
-    dispatch(showMessageForm({ name, chatId, src }));
-    context.setShowDisplay(true);
+    dispatch(showMessageForm({ name, contactId, chatId, src }));
+    setShowDisplay(true);
   };
 
   return (
@@ -41,19 +42,20 @@ const Contact = ({
 };
 
 Contact.propTypes = {
+  contactId: PropTypes.string.isRequired,
+  chatId: PropTypes.string,
   name: PropTypes.string.isRequired,
-  titleClassName: PropTypes.string,
   src: PropTypes.string.isRequired,
   paragraph: PropTypes.string,
   children: PropTypes.node,
-  chatId: PropTypes.string,
+  titleClassName: PropTypes.string,
 };
 
 Contact.defaultProps = {
-  titleClassName: "",
+  chatId: "(blank)",
   paragraph: "",
   children: null,
-  chatId: "(blank)",
+  titleClassName: "",
 };
 
 export default Contact;

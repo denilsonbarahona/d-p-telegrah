@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getMessages from "./actions";
-import getMessagesReducers from "./reducer";
+import getMessages, { sendMessage, createChat } from "./actions";
+import getMessagesReducers, {
+  sendMessageReducer,
+  createChatReducer,
+} from "./reducer";
 
 const initialState = {
   showMessageForm: false,
@@ -21,6 +24,8 @@ export const messagesSlice = createSlice({
   },
   extraReducers: {
     ...getMessagesReducers(getMessages),
+    ...sendMessageReducer(sendMessage),
+    ...createChatReducer(createChat),
   },
 });
 

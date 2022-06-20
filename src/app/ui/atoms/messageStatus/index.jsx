@@ -6,7 +6,7 @@ import { Status, Read } from "./message-status.style";
 const MessageStatus = ({ time }) => {
   return (
     <Status>
-      <IoCheckmarkDone /> 
+      <IoCheckmarkDone />
       <Read>{time}</Read>
     </Status>
   );

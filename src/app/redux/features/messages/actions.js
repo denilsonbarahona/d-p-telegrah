@@ -23,4 +23,34 @@ const getMessages = createAsyncThunk(
   }
 );
 
+export const sendMessage = createAsyncThunk(
+  "chats/sendMessage",
+  async (params, thunkAPI) => {
+    const {
+      extra: { chats },
+    } = thunkAPI;
+    const { chatID, message } = params;
+    const response = await chats.sendMessage(chatID, message, thunkAPI.signal);
+    if (response.failing) {
+      return thunkAPI.rejectWithValue(response.message);
+    }
+    return thunkAPI.fulfillWithValue(response.data);
+  }
+);
+
+export const createChat = createAsyncThunk(
+  "chats/createChat",
+  async (params, thunkAPI) => {
+    const {
+      extra: { chats },
+    } = thunkAPI;
+    const { id, message } = params;
+    const response = await chats.createChat(id, message, thunkAPI.signal);
+    if (response.failing) {
+      return thunkAPI.rejectWithValue(response.message);
+    }
+    return thunkAPI.fulfillWithValue(response.data);
+  }
+);
+
 export default getMessages;

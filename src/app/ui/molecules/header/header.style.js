@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   gap: 0.5rem;
   justify-content: space-between;
-  box-shadow: 1px 0 2px 1px #ededed;
+  box-shadow: 1px 0 2px 1px ${(props) => props.theme.shadow};
 `;
 
 export const ProfileInfo = styled.div`
@@ -20,5 +20,13 @@ export const Button = styled.button`
   color: var(--light-blue);
   cursor: pointer;
   background-color: transparent;
+  display: grid;
+  place-items: center;
   border: none;
+
+  @media screen and (min-width: 1024px) {
+    & {
+      display: none;
+    }
+  }
 `;

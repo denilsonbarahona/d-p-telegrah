@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Title = styled.h2`
   font: var(--body-16bold);
-  color: var(${props => props.theme.BaseTextColor});
+  color: var(${(props) => props.theme.BaseTextColor});
 `;
 
 export const TitleContainer = styled.div`

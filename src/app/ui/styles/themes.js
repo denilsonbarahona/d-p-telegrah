@@ -8,6 +8,7 @@ const Themes = {
     BaseTextColor: "--black",
     backdrop: "#66666733",
     tag: "#e5f2fa",
+    hover: "#66666733",
   },
   Dark: {
     background: "--black",
@@ -17,7 +18,8 @@ const Themes = {
     title: "--white",
     BaseTextColor: "--white",
     backdrop: "#66666733",
-    tag: "var(--dark-black-3)"
+    tag: "var(--dark-black-3)",
+    hover: "#666667",
   },
 };
 

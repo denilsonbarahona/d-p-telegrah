@@ -42,6 +42,7 @@ const MessagePanel = () => {
       <SidePanel>
         {chatState.map((chat) => (
           <Contact
+            contactId={chat.user.id}
             key={chat.id}
             chatId={chat.id}
             name={chat.user.name}
