@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import socket from "@/app/socket/socket-instance";
 import Search from "@atoms/search";
 import MessageStatus from "@atoms/messageStatus";
 import MessageAlert from "@atoms/messageAlert";
@@ -12,8 +13,17 @@ import { useSelector, useDispatch } from "react-redux";
 
 const MessagePanel = () => {
   const [chatState, setChatState] = useState([]);
+  const {
+    contactRequest: { chatId },
+  } = useSelector((state) => state.messages);
   const { chats } = useSelector((state) => state.chats);
   const dispatch = useDispatch();
+
+  socket.addEventListener("message", () => {
+    if (chatId === "(blank)") {
+      getChats({ id: "ldmYi4zkFvyCkQSlWqJ1", name: "Denilson Barahona" });
+    }
+  });
 
   React.useEffect(() => {
     setChatState(chats);

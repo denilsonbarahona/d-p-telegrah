@@ -1,4 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { notifyUser } from "../../../socket/socket-actions";
 
 const blank = "(blank)";
 const getMessages = createAsyncThunk(
@@ -34,6 +35,7 @@ export const sendMessage = createAsyncThunk(
     if (response.failing) {
       return thunkAPI.rejectWithValue(response.message);
     }
+    notifyUser("ldmYi4zkFvyCkQSlWqJ1", "1ahlUn1TI0a2DBajjJ7p");
     return thunkAPI.fulfillWithValue(response.data);
   }
 );

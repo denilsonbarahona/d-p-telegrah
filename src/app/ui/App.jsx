@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
+import openSocket from "@/app/socket/socket-actions";
 import UIChanges from "@context/uiChanges";
 import RoutesApp from "@Routes/route";
 import MessageDisplay from "@organism/messageDisplay";
@@ -10,6 +11,9 @@ import Themes from "@Style/themes";
 
 const App = () => {
   const { Theme } = useContext(UIChanges);
+  useEffect(() => {
+    openSocket();
+  }, []);
   const { showMessageForm } = useSelector((state) => state.messages);
   return (
     <ThemeProvider theme={Themes[Theme]}>

@@ -21,6 +21,7 @@
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "cors": "^2.8.5",
+    "firebase": "^9.8.3",
     "firebase-tools": "^11.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",

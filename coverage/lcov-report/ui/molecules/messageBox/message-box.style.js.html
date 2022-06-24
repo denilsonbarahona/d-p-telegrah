@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>4/10</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>4/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,7 +95,28 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,47 +126,63 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styled from "styled-components";
 &nbsp;
-export const MessageContainer = styled.div`
+export const MessageContainer = styled.form`
   display: flex;
   gap: 1rem;
   padding-block: 1rem;
   padding-inline: 0.5rem;
-  box-shadow: 1px 0 2px 1px #ededed;
+  font-size: 1rem;
+  box-shadow: 1px 0 2px 1px ${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.shadow}</span>;
+  color: var(${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.BaseTextColor}</span>);
 `;
 &nbsp;
 export const Button = styled.button`
+  display: grid;
+  place-items: center;
+  padding-left: 0.6rem;
+  box-sizing: border-box;
   background-color: transparent;
+  font-size: 1.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
   border: none;
-  cursor: pointer;
+  color: var(${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.BaseTextColor}</span>);
+&nbsp;
+  &amp;:hover {
+    background-color: ${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.hover}</span>;
+  }
 `;
 &nbsp;
 export const TextArea = styled.textarea`
   flex: 1;
   border: none;
+  background-color: var(${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.background}</span>);
+  color: var(${<span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; <span class="cstat-no" title="statement not covered" >props.theme.BaseTextColor}</span>);
   font: var(--body-16regular);
   padding: 0;
 `;
@@ -154,10 +191,6 @@ export const MessageAction = styled.div`
   align-self: center;
   display: flex;
   gap: 1rem;
-&nbsp;
-  &amp; * {
-    cursor: pointer;
-  }
 `;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -166,7 +199,7 @@ export const MessageAction = styled.div`
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 14 2022 20:05:12 GMT-0600 (hora estándar central)
+                at Sun Jun 19 2022 20:47:11 GMT-0600 (hora estándar central)
             </div>
         <script src="../../../prettify.js"></script>
         <script>
