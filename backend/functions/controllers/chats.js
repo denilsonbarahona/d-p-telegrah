@@ -14,7 +14,7 @@ const getMessageFromChat =({db}) => async (req, res) =>{
 };
 
 const addMessageToChat = ({db}) => async (req, res) =>{
-  const payload = JSON.parse(req.body);
+  const payload = req.body;
   const {chatId, messageObject} = payload;
   const messages = await chatService(db.chats)
       .addMessageToChat(chatId, messageObject);
@@ -22,7 +22,7 @@ const addMessageToChat = ({db}) => async (req, res) =>{
 };
 
 const createChat = ({db}) => async (req, res) =>{
-  const payload = JSON.parse(req.body);
+  const payload = req.body;
   const {id, sender, messageObject} = payload;
   const {name} = await userService(db.users).getUserById(id);
   const participants = [{id, name}, {id: sender.id, name: sender.name}];

@@ -24,7 +24,7 @@ const createUser =
   ({db}) =>
     async (req, res) => {
       const contact = await userService(db.users).createUser(
-          JSON.parse(req.body),
+          req.body,
       );
       if (contact) {
         res.status(200).json(contact);
