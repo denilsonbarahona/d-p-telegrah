@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import socket from "@/app/socket/socket-instance";
 import UIChanges from "@context/uiChanges";
 import Tag from "@atoms/tag";
 import Message from "@molecules/message";
@@ -11,10 +12,17 @@ import { Main, MessageContainer } from "./message-display.style";
 const MessageDisplay = () => {
   const { showDisplay } = useContext(UIChanges);
   const {
-    contactRequest: { chatId, name, src },
+    contactRequest: { chatId, name, src, contactId },
   } = useSelector((state) => state.messages);
   const { messages } = useSelector((state) => state.messages);
   const dispatch = useDispatch();
+
+  socket.addEventListener("message", (message) => {
+    const { sender } = JSON.parse(message.data);
+    if (contactId === sender) {
+      getMessages({ id: chatId, page: 1 });
+    }
+  });
 
   React.useEffect(() => {
     const promise = dispatch(getMessages({ id: chatId, page: 1 }));

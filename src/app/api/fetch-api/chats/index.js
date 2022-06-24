@@ -41,6 +41,9 @@ const sendMessage = async (chatID, message, signal) => {
     };
     const raw = await fetch(`${BASE}messages`, {
       method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ chatId: chatID, messageObject }),
       signal,
     });

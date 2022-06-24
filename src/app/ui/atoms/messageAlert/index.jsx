@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import AlertBubble from "./message-alert.style";
 
 const MessageAlert = ({ counter }) => {
-  if(counter > 0) {
+  if (counter > 0) {
     return (
       <AlertBubble role="alert" aria-label={`${counter} messages without read`}>
         {counter}
