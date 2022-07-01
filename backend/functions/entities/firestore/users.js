@@ -47,15 +47,36 @@ async function createUser(contact) {
   const userToAdd = await getUserByEmail(contact.email);
   if (userToAdd) {
     const {contacts, id} = await getUserByEmail(contact.owner);
-    const newContacts = [...contacts, {id, name: contact.name}];
+    const newContacts = [...contacts, {id: userToAdd.id, name: contact.name}];
     db.collection("users").doc(id).update({contacts: newContacts});
     return {...userToAdd, contacts: [], name: contact.name};
   }
   return userToAdd;
 }
 
+
+/**
+ * @param {*} login user data to check sign in or sign up
+ * @return {object} user object
+ */
+async function login(login) {
+  const user = await getUserByEmail(login.email);
+  if (!user) {
+    await db.collection("users")
+        .doc()
+        .set({
+          contacts: [],
+          lastSeen: "today",
+          ...login,
+        });
+    return await getUserByEmail(login.email);
+  }
+  return user;
+}
+
 module.exports = {
   getUsers,
   getUserById,
   createUser,
+  login,
 };

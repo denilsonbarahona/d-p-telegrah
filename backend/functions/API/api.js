@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({
 
 app.get("/api/users", usersController.getUsers({db}));
 app.get("/api/users/:id", usersController.getUserById({db}));
-app.post("/api/users", usersController.createUser({db}));
+app.put("/api/users", usersController.createUser({db}));
+app.post("/api/users", usersController.login({db}));
 app.get("/api/chats/:id/:name", chatController.getChat({db}));
 app.post("/api/chats", chatController.createChat({db}));
 app.get("/api/messages/:id/:page", chatController.getMessageFromChat({db}));

@@ -1,7 +1,10 @@
 const {getTimeFormat} = require("./time-ago");
 
-const destructuringParticipants = ({participants}, userId) => {
+
+const destructuringParticipants = ({participants}, userId, contacts) => {
   const user = participants.find((participant) => participant.id !== userId);
+  const filtered = contacts.filter((item)=>item.id === user.id)[0];
+  user.name = (filtered?.name)?filtered?.name:user.name;
   return user;
 };
 
@@ -19,8 +22,8 @@ const destructuringMessage = ({messages}, userId)=>{
   return {notRead, lastMessage};
 };
 
-const formattingChat = (chat, userId) => {
-  const user = destructuringParticipants(chat, userId);
+const formattingChat = (chat, userId, contacts) => {
+  const user = destructuringParticipants(chat, userId, contacts);
   const {notRead, lastMessage} = destructuringMessage(chat, userId);
   return {
     id: chat.id,
