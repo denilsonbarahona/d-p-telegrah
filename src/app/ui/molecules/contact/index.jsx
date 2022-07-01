@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import UIChanges from "@context/uiChanges";
+import Context from "@context/Context";
 import Profile from "@atoms/profileImage";
 import ProfileTitle from "@atoms/profileTitle";
 import ProfileParagraph from "@atoms/profileParagraph";
@@ -18,7 +18,7 @@ const Contact = ({
   titleClassName,
 }) => {
   const dispatch = useDispatch();
-  const { setShowDisplay } = useContext(UIChanges);
+  const { setShowDisplay } = useContext(Context);
 
   const handleOnClick = () => {
     dispatch(showMessageForm({ name, contactId, chatId, src }));

@@ -26,14 +26,8 @@ const getMessageFromChat = async (chatID, page, signal) => {
   }
 };
 
-const sendMessage = async (chatID, message, signal) => {
+const sendMessage = async (chatID, message, sender, signal) => {
   try {
-    const sender = {
-      id: "ldmYi4zkFvyCkQSlWqJ1",
-      name: "Denilson Barahona",
-      image: "https://picsum.photos/id/237/200/300",
-    };
-
     const messageObject = {
       message,
       read: false,
@@ -54,14 +48,8 @@ const sendMessage = async (chatID, message, signal) => {
   }
 };
 
-const createChat = async (id, message, signal) => {
+const createChat = async (id, message, sender, signal) => {
   try {
-    const sender = {
-      id: "ldmYi4zkFvyCkQSlWqJ1",
-      name: "Denilson Barahona",
-      image: "https://picsum.photos/id/237/200/300",
-    };
-
     const messageObject = {
       message,
       read: false,
@@ -69,6 +57,9 @@ const createChat = async (id, message, signal) => {
     };
     const raw = await fetch(`${BASE}chats`, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ id, sender, messageObject }),
       signal,
     });

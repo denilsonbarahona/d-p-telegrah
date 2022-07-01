@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import UIChanges from "@context/uiChanges";
+import Context from "@context/Context";
 import SidePanel from "@template/sidePanel";
 import Navigator from "@molecules/navigator";
 import Preference from "@atoms/colorPreference";
@@ -8,7 +8,7 @@ import Light from "@Images/light.webp";
 import { Title, Container, TitleContainer } from "./config-panel.style";
 
 const ConfigPanel = () => {
-  const { Theme, setTheme } = useContext(UIChanges);
+  const { Theme, setTheme } = useContext(Context);
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);

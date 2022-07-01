@@ -15,6 +15,8 @@ const getMessages = createAsyncThunk(
         page,
         thunkAPI.signal
       );
+
+      console.log(response);
       if (response.failing) {
         return thunkAPI.rejectWithValue(response.message);
       }
@@ -30,12 +32,12 @@ export const sendMessage = createAsyncThunk(
     const {
       extra: { chats },
     } = thunkAPI;
-    const { chatID, message } = params;
-    const response = await chats.sendMessage(chatID, message, thunkAPI.signal);
+    const { contactId, chatID, message, sender } = params;
+    const response = await chats.sendMessage(chatID, message, sender, thunkAPI.signal);
     if (response.failing) {
       return thunkAPI.rejectWithValue(response.message);
     }
-    notifyUser("ldmYi4zkFvyCkQSlWqJ1", "1ahlUn1TI0a2DBajjJ7p");
+    notifyUser(sender.id, contactId);
     return thunkAPI.fulfillWithValue(response.data);
   }
 );
@@ -46,11 +48,12 @@ export const createChat = createAsyncThunk(
     const {
       extra: { chats },
     } = thunkAPI;
-    const { id, message } = params;
-    const response = await chats.createChat(id, message, thunkAPI.signal);
+    const { contactId, message, sender } = params;
+    const response = await chats.createChat(contactId, message, sender, thunkAPI.signal);
     if (response.failing) {
       return thunkAPI.rejectWithValue(response.message);
     }
+    notifyUser(sender.id, contactId);
     return thunkAPI.fulfillWithValue(response.data);
   }
 );

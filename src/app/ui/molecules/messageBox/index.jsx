@@ -12,15 +12,23 @@ import {
 const MessageBox = () => {
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
+  const { user } = useSelector(state=>state.auth);
   const { contactRequest } = useSelector((state) => state.messages);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { chatId } = contactRequest;
+    const { chatId, contactId } = contactRequest;
+    const sender = {
+      name: user.name, 
+      id: user.id,
+      image: user.image
+    };
+    
+
     if (chatId !== "(blank)" && message !== "") {
-      dispatch(sendMessage({ chatID: chatId, message }));
+      dispatch(sendMessage({ contactId, chatID: chatId, message, sender }));
     } else if (chatId === "(blank)" && message !== "") {
-      dispatch(createChat({ id: contactRequest.contactId, message }));
+      dispatch(createChat({ contactId, message, sender }));
     }
     setMessage("");
   };

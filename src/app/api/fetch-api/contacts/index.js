@@ -16,7 +16,10 @@ const getMyContacts = async (email, signal) => {
 const createContact = async (contact, signal) => {
   try {
     const raw = await fetch(`${BASE}users`, {
-      method: "POST",
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(contact),
       signal,
     });

@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import UIChanges from "@context/uiChanges";
+import Context from "@context/Context";
 import Profile from "@atoms/profileImage";
 import ProfileTitle from "@atoms/profileTitle";
 import { IoArrowBack } from "react-icons/io5";
 import { HeaderContainer, ProfileInfo, Button } from "./header.style";
 
 const Header = ({ name, image }) => {
-  const { setShowDisplay } = useContext(UIChanges);
+  const { setShowDisplay } = useContext(Context);
 
   const handleOnClick = () => {
     setShowDisplay(false);
