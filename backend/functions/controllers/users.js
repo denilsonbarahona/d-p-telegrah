@@ -33,8 +33,22 @@ const createUser =
       }
     };
 
+const login =
+    ({db}) =>
+      async (req, res) =>{
+        const login = await userService(db.users).login(
+            req.body,
+        );
+        if (login) {
+          res.status(200).json(login);
+        } else {
+          res.status(404).json(login);
+        }
+      };
+
 module.exports = {
   getUsers,
   createUser,
   getUserById,
+  login,
 };

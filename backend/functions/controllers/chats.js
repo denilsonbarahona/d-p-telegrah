@@ -3,7 +3,8 @@ const userService = require("../services/users.js");
 
 const getChat = ({db}) => async (req, res) =>{
   const {params: {id, name}} = req;
-  const chats = await chatService(db.chats).getChats(id, name);
+  const {image, contacts} = await userService(db.users).getUserById(id);
+  const chats = await chatService(db.chats).getChats(id, image, name, contacts);
   res.status(200).json(chats);
 };
 
@@ -24,8 +25,9 @@ const addMessageToChat = ({db}) => async (req, res) =>{
 const createChat = ({db}) => async (req, res) =>{
   const payload = req.body;
   const {id, sender, messageObject} = payload;
-  const {name} = await userService(db.users).getUserById(id);
-  const participants = [{id, name}, {id: sender.id, name: sender.name}];
+  const {name, image} = await userService(db.users).getUserById(id);
+  const participants = [{id, name, image},
+    {id: sender.id, name: sender.name, image: sender.image}];
   const messages = await chatService(db.chats)
       .createChat(participants, [messageObject]);
   res.status(200).json(messages);
