@@ -18,10 +18,11 @@ const MessagePanel = () => {
   } = useSelector((state) => state.messages);
   const { chats } = useSelector((state) => state.chats);
   const dispatch = useDispatch();
+  const { user } = useSelector(state=>state.auth);
 
   socket.addEventListener("message", () => {
-    if (chatId === "(blank)") {
-      getChats({ id: "ldmYi4zkFvyCkQSlWqJ1", name: "Denilson Barahona" });
+    if (chatId === "(blank)" || !chatId) {
+      dispatch(getChats({ id: user.id, name: user.name }));
     }
   });
 
@@ -31,7 +32,7 @@ const MessagePanel = () => {
 
   React.useEffect(() => {
     const promise = dispatch(
-      getChats({ id: "ldmYi4zkFvyCkQSlWqJ1", name: "Denilson Barahona" })
+      getChats({ id: user.id, name: user.name })
     );
     return () => promise.abort();
   }, []);
@@ -56,7 +57,7 @@ const MessagePanel = () => {
             key={chat.id}
             chatId={chat.id}
             name={chat.user.name}
-            src="https://picsum.photos/id/237/200/300"
+            src={chat.user.image}
             paragraph={chat.lastMessage.message}
           >
             <ContactNotification>

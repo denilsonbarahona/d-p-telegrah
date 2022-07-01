@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 const ContactPanel = () => {
   const [contactState, setContactState] = useState([]);
   const { contacts } = useSelector((state) => state.contact);
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -18,8 +19,11 @@ const ContactPanel = () => {
   }, [contacts]);
 
   React.useEffect(() => {
-    const promise = dispatch(getContact("91sbarahona@gmail.com"));
-    return () => promise.abort();
+    if(user?.email) {
+      const promise = dispatch(getContact(user.email));
+      return () => promise.abort();
+    }
+    return ()=>{};
   }, []);
 
   const handleOnChange = (event) => {

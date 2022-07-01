@@ -2,11 +2,11 @@ import React from "react";
 import initialState from "@context/initState";
 import PropTypes from "prop-types";
 
-const UIChanges = React.createContext(null);
+const Context = React.createContext(null);
 
 export const ContextProvider = ({ children }) => {
   return (
-    <UIChanges.Provider value={initialState()}>{children}</UIChanges.Provider>
+    <Context.Provider value={initialState()}>{children}</Context.Provider>
   );
 };
 
@@ -14,4 +14,4 @@ ContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default UIChanges;
+export default Context;
