@@ -48,7 +48,7 @@ const ContactPanel = () => {
             chatId={contact.chatId}
             name={contact.name}
             src={contact.image}
-            paragraph="últ. vez recientemente"
+            paragraph={`últ. vez ${contact.lastSeen}`}
           />
         ))}
       </SidePanel>
