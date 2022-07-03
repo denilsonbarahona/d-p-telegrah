@@ -1,23 +1,43 @@
 import { faker } from "@faker-js/faker";
 
+const getMessage = () => ({
+    message: faker.lorem.sentence(),
+    read: faker.datatype.boolean(),
+    sender: {
+        id: faker.datatype.uuid(),
+        image: faker.image.imageUrl(),
+        name: faker.name.findName()
+    },
+    time: faker.date.recent().toDateString(),
+})
+
 export const getChat = () =>({
-    createdAt: faker.date.recent().toDateString(),
     id: faker.datatype.uuid(),
-    messages: [{
-            message: faker.lorem.sentence(),
-            sender: faker.datatype.uuid(),
-            time: faker.date.recent().toDateString(),
-    }],
-    participants: [
-        faker.datatype.uuid(),
-        faker.datatype.uuid(),
-    ]
-});
+    user: {
+        id: faker.datatype.uuid(),
+        image: faker.image.imageUrl(),
+        name: faker.name.findName(),
+    },
+    notRead: faker.datatype.number(),
+    lastMessage: getMessage(),
+})
 
 export const generateManyChats = (count) => {
-    const messages = [];
+    const chats = [];
     for (let i = 0; i < count; i++) {
-        messages.push(getChat());
+        chats.push(getChat());
     }
-    return messages;
+    return chats;
+}
+
+export const generateManyMessage = (count) => {
+    const messages = [];
+    for(let i=0; i< count; i++) {
+        messages.push(getMessage())
+    }
+
+    return [{
+        tag: faker.date.weekday(),
+        messages
+    }]
 }
