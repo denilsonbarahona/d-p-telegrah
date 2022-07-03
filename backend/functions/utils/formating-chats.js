@@ -1,10 +1,12 @@
 const {getTimeFormat} = require("./time-ago");
 
-
-const destructuringParticipants = ({participants}, userId, contacts) => {
-  const user = participants.find((participant) => participant.id !== userId);
-  const filtered = contacts.filter((item)=>item.id === user.id)[0];
-  user.name = (filtered?.name)?filtered?.name:user.name;
+const destructuringParticipants =
+async ({participants}, userId, getUserById) => {
+  const participant = participants.find((item)=>item.id !== userId);
+  const {contacts} = await getUserById(userId);
+  const {image} = await getUserById(participant.id);
+  const myContactName = contacts.find((item)=>item.id !== userId);
+  const user = {...participant, image, name: myContactName.name};
   return user;
 };
 
@@ -22,8 +24,8 @@ const destructuringMessage = ({messages}, userId)=>{
   return {notRead, lastMessage};
 };
 
-const formattingChat = (chat, userId, contacts) => {
-  const user = destructuringParticipants(chat, userId, contacts);
+const formattingChat = async (chat, userId, getUserByID) => {
+  const user = await destructuringParticipants(chat, userId, getUserByID);
   const {notRead, lastMessage} = destructuringMessage(chat, userId);
   return {
     id: chat.id,
