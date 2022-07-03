@@ -1,21 +1,25 @@
 const {db, fire} = require("../../connections/firestore-connect");
 const groupingMessages = require("../../utils/grouping-messages");
 const {formattingChat} = require("../../utils/formating-chats");
+
+
 /**
  * @param {*} id id of user
- * @param {*} image url image
  * @param {*} name name of user
- * @param {*} contacts list of contact
+ * @param {*} getUsersById function to get UserInformation
  * @return {object} array of chats object
  */
-async function getChats(id, image, name, contacts) {
+async function getChats(id, name, getUsersById) {
   const snapshot = await db.collection("chats")
-      .where("participants", "array-contains", {id, image, name})
+      .where("participants", "array-contains", {id, name})
       .orderBy("createdAt", "desc")
       .get();
-  return snapshot.docs.map((doc) => {
-    return formattingChat({...doc.data(), id: doc.id}, id, contacts);
-  } );
+
+  const chats = snapshot.docs.map( async (doc) => {
+    return formattingChat({...doc.data(), id: doc.id}, id, getUsersById);
+  });
+
+  return await Promise.all(chats);
 }
 
 /**

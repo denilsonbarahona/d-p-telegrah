@@ -3,8 +3,8 @@ const userService = require("../services/users.js");
 
 const getChat = ({db}) => async (req, res) =>{
   const {params: {id, name}} = req;
-  const {image, contacts} = await userService(db.users).getUserById(id);
-  const chats = await chatService(db.chats).getChats(id, image, name, contacts);
+  const getUsersById = userService(db.users).getUserById;
+  const chats = await chatService(db.chats).getChats(id, name, getUsersById);
   res.status(200).json(chats);
 };
 
