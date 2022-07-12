@@ -1,14 +1,17 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import ConfigPanel from "@pages/configPanel";
+import { ContextProvider } from "@context/Context";
 import RouterMock from "../../../__mocks__/routes/routeMock";
 
 describe("config-panel container", () => {
   it("rendering without crashing", () => {
     const { getByRole } = render(
-      <RouterMock>
-        <ConfigPanel />
-      </RouterMock>
+      <ContextProvider>
+        <RouterMock>
+          <ConfigPanel />
+        </RouterMock>
+      </ContextProvider>
     );
     expect(
       getByRole("heading", {

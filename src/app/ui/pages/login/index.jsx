@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Google from "@atoms/google";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -12,11 +12,11 @@ import {
 
 const Login = () => {
   const navigate = useNavigate();
-  const {isLoaded} = useSelector(state=>state.auth);
+  const { isLoaded } = useSelector((state) => state.auth);
 
-  useEffect(()=>{
-    if(isLoaded) navigate("/");
-  },[isLoaded]);
+  useEffect(() => {
+    if (isLoaded) navigate("/");
+  }, [isLoaded]);
 
   return (
     <main>

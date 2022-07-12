@@ -11,7 +11,7 @@ describe("call panel container", () => {
       </RouterMock>
     );
     expect(
-      getByRole("heading", { level: 2, name: /Recent Calls/i })
+      getByRole("heading", { level: 2, name: /Make a Call/i })
     ).toBeInTheDocument();
   });
 });

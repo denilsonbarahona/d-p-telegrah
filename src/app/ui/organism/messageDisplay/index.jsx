@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import socket from "@/app/socket/socket-instance";
+import { ListenMessage } from "@/app/socket/socket-instance";
 import Context from "@context/Context";
 import Tag from "@atoms/tag";
 import Message from "@molecules/message";
@@ -17,7 +17,7 @@ const MessageDisplay = () => {
   const { messages } = useSelector((state) => state.messages);
   const dispatch = useDispatch();
 
-  socket.addEventListener("message", (message) => {
+  ListenMessage((message)=>{
     const { sender } = JSON.parse(message.data);
     if (contactId === sender) {
       dispatch(getMessages({ id: chatId, page: 1 }));
@@ -31,7 +31,7 @@ const MessageDisplay = () => {
 
   return (
     <Main hide={showDisplay}>
-      <Header name={name} image={src} />
+      <Header name={name ?? ""} image={src ?? ""} />
       <MessageContainer>
         {messages.map((message) => (
           <div key={message.tag}>

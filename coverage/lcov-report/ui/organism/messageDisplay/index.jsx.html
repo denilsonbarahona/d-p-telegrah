@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.11% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/18</span>
+                <span class='fraction'>15/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>12/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,34 +130,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,7 +175,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import socket from "@/app/socket/socket-instance";
+import { ListenMessage } from "@/app/socket/socket-instance";
 import Context from "@context/Context";
 import Tag from "@atoms/tag";
 import Message from "@molecules/message";
@@ -188,31 +188,31 @@ const MessageDisplay = () =&gt; {
   const { showDisplay } = useContext(Context);
   const {
     contactRequest: { chatId, name, src, contactId },
-  } = <span class="cstat-no" title="statement not covered" >useSelector(<span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; <span class="cstat-no" title="statement not covered" >state.messages)</span>;</span>
-  const { messages } = <span class="cstat-no" title="statement not covered" >useSelector(<span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; <span class="cstat-no" title="statement not covered" >state.messages)</span>;</span>
-  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
+  } = useSelector((state) =&gt; state.messages);
+  const { messages } = useSelector((state) =&gt; state.messages);
+  const dispatch = useDispatch();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  socket.addEventListener("message", <span class="fstat-no" title="function not covered" >(m</span>essage) =&gt; {</span>
+  ListenMessage(<span class="fstat-no" title="function not covered" >(m</span>essage)=&gt;{
     const { sender } = <span class="cstat-no" title="statement not covered" >JSON.parse(message.data);</span>
 <span class="cstat-no" title="statement not covered" >    if (contactId === sender) {</span>
 <span class="cstat-no" title="statement not covered" >      dispatch(getMessages({ id: chatId, page: 1 }));</span>
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  React.useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-    const promise = <span class="cstat-no" title="statement not covered" >dispatch(getMessages({ id: chatId, page: 1 }));</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >promise.abort();</span></span>
+  React.useEffect(() =&gt; {
+    const promise = dispatch(getMessages({ id: chatId, page: 1 }));
+    return () =&gt; promise.abort();
   }, [chatId]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;Main hide={showDisplay}&gt;
-      &lt;Header name={name} image={src} /&gt;
+      &lt;Header name={name ?? ""} image={src ?? ""} /&gt;
       &lt;MessageContainer&gt;
-        {messages.map(<span class="fstat-no" title="function not covered" >(m</span>essage) =&gt; (
-<span class="cstat-no" title="statement not covered" >          &lt;div key={message.tag}&gt;</span>
+        {messages.map((message) =&gt; (
+          &lt;div key={message.tag}&gt;
             &lt;Tag tag={message.tag} /&gt;
-            {message.messages.map(<span class="fstat-no" title="function not covered" >(i</span>tem, i) =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;Message</span>
+            {message.messages.map((item, i) =&gt; (
+              &lt;Message
                 name={item.sender.name}
                 image={item.sender.image}
                 key={`message-#${i}`}
@@ -235,7 +235,7 @@ export default MessageDisplay;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jul 01 2022 14:50:26 GMT-0600 (hora estándar central)
+                at Mon Jul 11 2022 10:07:21 GMT-0600 (hora estándar central)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

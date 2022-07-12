@@ -2,8 +2,8 @@ import React from "react";
 import AddContact from "@molecules/addContact";
 import reactDom from "react-dom";
 import { render, fireEvent, screen } from "@testing-library/react";
-import { OpenModalMock, CloseModalMock } from "../../../__mocks__/atoms/Modal";
-import ProviderMock from "../../../__mocks__/redux/providerMock";
+import { OpenModalMock, CloseModalMock } from "@/app/__mocks__/atoms/Modal";
+import ProviderMock from "@/app/__mocks__/redux/providerMock";
 
 describe("AddContact", () => {
   beforeAll(() => {
@@ -28,7 +28,7 @@ describe("AddContact", () => {
     expect(button).toBeInTheDocument();
   });
 
-  it("should open dialog when button is clicked", async () => {
+  it("should open dialog when button is clicked", async() => {
     render(
       <ProviderMock>
         <AddContact />
@@ -65,7 +65,7 @@ describe("AddContact", () => {
       HTMLDialogElement.prototype.close = closeModal;
     });
 
-    it("should close dialog when close button is clicked", async () => {
+    it("should close dialog when close button is clicked", () => {
       /**
        * getting button and firing click event to open the dialog.
        */

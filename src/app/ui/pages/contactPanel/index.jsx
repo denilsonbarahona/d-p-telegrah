@@ -19,11 +19,10 @@ const ContactPanel = () => {
   }, [contacts]);
 
   React.useEffect(() => {
-    if(user?.email) {
-      const promise = dispatch(getContact(user.email));
+    // if (user?.email) {
+      const promise = dispatch(getContact(user?.email));
       return () => promise.abort();
-    }
-    return ()=>{};
+    // }
   }, []);
 
   const handleOnChange = (event) => {
