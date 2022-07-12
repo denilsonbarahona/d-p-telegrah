@@ -6,15 +6,15 @@ import { useDispatch } from "react-redux";
 import { Figure, Button, FigCaption } from "./google.style";
 
 const Google = () => {
-
   const dispatch = useDispatch();
 
   const handleLoginClick = async () => {
     const credentials = await signInWithPopup(auth, provider);
-    const {user: {displayName: name, email, photoURL: image}} = credentials;
-    dispatch(login({name, email, image}));
+    const {
+      user: { displayName: name, email, photoURL: image },
+    } = credentials;
+    dispatch(login({ name, email, image }));
   };
-
 
   return (
     <Button type="button" onClick={handleLoginClick}>

@@ -4,7 +4,7 @@ const Login = async (data, signal) => {
   try {
     const raw = await fetch(`${BASE}users`, {
       method: "POST",
-       headers: {
+      headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
@@ -20,4 +20,4 @@ const Login = async (data, signal) => {
   }
 };
 
-export default {Login};
+export default { Login };

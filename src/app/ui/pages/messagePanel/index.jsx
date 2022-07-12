@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import socket from "@/app/socket/socket-instance";
+import { ListenMessage } from "@/app/socket/socket-instance";
 import Search from "@atoms/search";
 import MessageStatus from "@atoms/messageStatus";
 import MessageAlert from "@atoms/messageAlert";
@@ -18,11 +18,11 @@ const MessagePanel = () => {
   } = useSelector((state) => state.messages);
   const { chats } = useSelector((state) => state.chats);
   const dispatch = useDispatch();
-  const { user } = useSelector(state=>state.auth);
+  const { user } = useSelector((state) => state.auth);
 
-  socket.addEventListener("message", () => {
+  ListenMessage(()=>{
     if (chatId === "(blank)" || !chatId) {
-      dispatch(getChats({ id: user.id, name: user.name }));
+      dispatch(getChats({ id: user?.id, name: user?.name }));
     }
   });
 
@@ -31,9 +31,7 @@ const MessagePanel = () => {
   }, [chats]);
 
   React.useEffect(() => {
-    const promise = dispatch(
-      getChats({ id: user.id, name: user.name })
-    );
+    const promise = dispatch(getChats({ id: user?.id, name: user?.name }));
     return () => promise.abort();
   }, []);
 

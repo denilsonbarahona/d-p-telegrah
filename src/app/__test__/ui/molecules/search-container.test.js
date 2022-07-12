@@ -4,7 +4,8 @@ import SearchContainer from "@molecules/searchContainer";
 
 describe("SearchContainer", () => {
   it("rendering without crashing", () => {
-    const { container } = render(<SearchContainer />);
+    const { container, queryByText } = render(<SearchContainer><p>test</p></SearchContainer>);
     expect(container).toBeTruthy();
+    expect(queryByText("test")).toBeInTheDocument();
   });
 });

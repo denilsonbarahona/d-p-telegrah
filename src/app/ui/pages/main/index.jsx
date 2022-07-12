@@ -5,16 +5,16 @@ import MessageDisplay from "@organism/messageDisplay";
 import AppLayout from "@template/appLayout";
 import SideLayout from "@template/sideLayout";
 import openSocket from "@/app/socket/socket-actions";
+import {Emit} from "@/app/socket/socket-instance";
 
 const Main = () => {
-  
   const navigate = useNavigate();
   const { showMessageForm } = useSelector((state) => state.messages);
-  const {isLoaded, user } = useSelector((state)=>state.auth);
+  const { isLoaded, user } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    if(!isLoaded) navigate("/login");
-    openSocket(user?.id);
+    if (!isLoaded) navigate("/login");
+    openSocket(user?.id, Emit);
   }, [isLoaded]);
 
   return (

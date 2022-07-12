@@ -8,26 +8,10 @@ const CallPanel = () => {
   return (
     <>
       <TitleContainer>
-        <PanelTitle>Recent Calls</PanelTitle>
+        <PanelTitle>Make a Call</PanelTitle>
       </TitleContainer>
       <SidePanel>
-        <Contact
-          name="Denilson Barahona"
-          titleClassName="isRed"
-          src="https://picsum.photos/id/237/200/300"
-          paragraph="Lost"
-        />
-        <Contact
-          name="Denilson Barahona"
-          titleClassName="isBlue"
-          src="https://picsum.photos/id/237/200/300"
-          paragraph="Outgoing"
-        />
-        <Contact
-          name="Denilson Barahona"
-          src="https://picsum.photos/id/237/200/300"
-          paragraph="Incoming"
-        />
+        <p>Call Panel</p>
       </SidePanel>
       <Navigator path="/call" />
     </>

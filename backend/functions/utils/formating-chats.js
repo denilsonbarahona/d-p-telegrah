@@ -6,7 +6,7 @@ async ({participants}, userId, getUserById) => {
   const {contacts} = await getUserById(userId);
   const {image} = await getUserById(participant.id);
   const myContactName = contacts.find((item)=>item.id !== userId);
-  const user = {...participant, image, name: myContactName.name};
+  const user = {...participant, image, name: myContactName?.name};
   return user;
 };
 

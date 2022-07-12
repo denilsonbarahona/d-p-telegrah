@@ -38,7 +38,7 @@ describe("Routes", () => {
   });
 
   describe("testing the /call route", () => {
-    it("testing rendering /call", async () => {
+    it("testing rendering /call", () => {
       render(
         <ProviderMock>
           <RoutesApp />

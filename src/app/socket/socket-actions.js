@@ -1,28 +1,25 @@
-import socket from "./socket-instance";
-
-const openSocket = (connector) => {
-  try{
+const openSocket = (connector, emit) => {
+  try {
     const json = {
       action: "connection",
       payload: connector,
     };
-    socket.send(JSON.stringify(json));
+    emit(JSON.stringify(json));
   } catch (e) {
     console.log(e);
   }
 };
 
-export const notifyUser = (sender, receiver) => {
+export const notifyUser = (sender, receiver, emit) => {
   try {
     const json = {
       action: "notify",
       payload: { sender, receiver },
     };
-    socket.send(JSON.stringify(json));
+    emit(JSON.stringify(json));
   } catch (e) {
     console.log(e);
   }
-
 };
 
 export default openSocket;

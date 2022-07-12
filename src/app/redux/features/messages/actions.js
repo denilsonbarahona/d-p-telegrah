@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { notifyUser } from "../../../socket/socket-actions";
+import { Emit } from "@/app/socket/socket-instance";
+import { notifyUser } from "@/app/socket/socket-actions";
 
 const blank = "(blank)";
 const getMessages = createAsyncThunk(
@@ -16,7 +17,6 @@ const getMessages = createAsyncThunk(
         thunkAPI.signal
       );
 
-      console.log(response);
       if (response.failing) {
         return thunkAPI.rejectWithValue(response.message);
       }
@@ -33,11 +33,16 @@ export const sendMessage = createAsyncThunk(
       extra: { chats },
     } = thunkAPI;
     const { contactId, chatID, message, sender } = params;
-    const response = await chats.sendMessage(chatID, message, sender, thunkAPI.signal);
+    const response = await chats.sendMessage(
+      chatID,
+      message,
+      sender,
+      thunkAPI.signal
+    );
     if (response.failing) {
       return thunkAPI.rejectWithValue(response.message);
     }
-    notifyUser(sender.id, contactId);
+    notifyUser(sender.id, contactId, Emit);
     return thunkAPI.fulfillWithValue(response.data);
   }
 );
@@ -49,11 +54,16 @@ export const createChat = createAsyncThunk(
       extra: { chats },
     } = thunkAPI;
     const { contactId, message, sender } = params;
-    const response = await chats.createChat(contactId, message, sender, thunkAPI.signal);
+    const response = await chats.createChat(
+      contactId,
+      message,
+      sender,
+      thunkAPI.signal
+    );
     if (response.failing) {
       return thunkAPI.rejectWithValue(response.message);
     }
-    notifyUser(sender.id, contactId);
+    notifyUser(sender.id, contactId, Emit);
     return thunkAPI.fulfillWithValue(response.data);
   }
 );

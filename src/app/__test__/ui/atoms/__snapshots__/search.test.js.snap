@@ -3,7 +3,7 @@
 exports[`Search to match snapshot 1`] = `
 <div>
   <form
-    class="sc-bczRLJ jlwOYJ"
+    class="sc-bczRLJ btuoYY"
     role="search"
   >
     <svg
@@ -31,7 +31,7 @@ exports[`Search to match snapshot 1`] = `
       />
     </svg>
     <input
-      class="sc-gsnTZi jWJSTi"
+      class="sc-gsnTZi hXyRod"
       name="search"
       placeholder="Search"
       type="search"
