@@ -22,7 +22,11 @@ const Main = () => {
       <SideLayout>
         <Outlet />
       </SideLayout>
-      {showMessageForm ? <MessageDisplay /> : <h2>placeholder</h2>}
+      {showMessageForm ? <MessageDisplay /> : <h2>
+        {/* <video id="video"></video>
+        <video id="videoRemote"></video> */}
+        PlaceHolder
+        </h2>}
     </AppLayout>
   );
 };

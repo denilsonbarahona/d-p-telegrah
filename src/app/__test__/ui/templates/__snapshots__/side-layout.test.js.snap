@@ -7,14 +7,14 @@ Object {
     <div>
       <aside
         aria-label="side menu"
-        class="sc-bczRLJ iZgclS"
+        class="sc-bczRLJ kKDeDF"
       />
     </div>
   </body>,
   "container": <div>
     <aside
       aria-label="side menu"
-      class="sc-bczRLJ iZgclS"
+      class="sc-bczRLJ kKDeDF"
     />
   </div>,
   "debug": [Function],

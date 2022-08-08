@@ -17,12 +17,14 @@ const MessageDisplay = () => {
   const { messages } = useSelector((state) => state.messages);
   const dispatch = useDispatch();
 
-  ListenMessage((message)=>{
-    const { sender } = JSON.parse(message.data);
-    if (contactId === sender) {
-      dispatch(getMessages({ id: chatId, page: 1 }));
-    }
-  });
+  React.useEffect(() => {
+    ListenMessage((message)=>{
+      const { sender } = JSON.parse(message.data);
+      if (contactId === sender) {
+        dispatch(getMessages({ id: chatId, page: 1 }));
+      }
+    });
+  } , []);
 
   React.useEffect(() => {
     const promise = dispatch(getMessages({ id: chatId, page: 1 }));

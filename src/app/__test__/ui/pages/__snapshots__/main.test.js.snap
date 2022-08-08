@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main pages rendering without crashing 1`] = `
+<div>
+  <div
+    class="sc-fnykZs iFSEpp"
+  >
+    <aside
+      aria-label="side menu"
+      class="sc-fEOsli hmhnzY"
+    />
+    <h2>
+      placeholder
+    </h2>
+  </div>
+</div>
+`;

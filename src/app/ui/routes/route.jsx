@@ -6,6 +6,7 @@ import MessagePanel from "@pages/messagePanel";
 import ConfigPanel from "@pages/configPanel";
 import Main from "@pages/main";
 import Login from "@pages/login";
+import Conference from "@pages/conference";
 
 const RoutesApp = () => {
   return (
@@ -17,6 +18,7 @@ const RoutesApp = () => {
           <Route path="message" element={<MessagePanel />} />
           <Route path="config" element={<ConfigPanel />} />
         </Route>
+        <Route path="/conference" element={<Conference />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>

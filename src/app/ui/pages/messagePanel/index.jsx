@@ -20,11 +20,13 @@ const MessagePanel = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
 
-  ListenMessage(()=>{
-    if (chatId === "(blank)" || !chatId) {
-      dispatch(getChats({ id: user?.id, name: user?.name }));
-    }
-  });
+  React.useEffect(() => {
+    ListenMessage(()=>{
+      if (chatId === "(blank)" || !chatId) {
+        dispatch(getChats({ id: user?.id, name: user?.name }));
+      }
+    });
+  } , []);
 
   React.useEffect(() => {
     setChatState(chats);

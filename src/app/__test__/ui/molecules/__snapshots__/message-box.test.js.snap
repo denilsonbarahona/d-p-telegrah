@@ -2,94 +2,36 @@
 
 exports[`MessageBox to match snapshot 1`] = `
 <div>
-  <div
-    class="sc-bczRLJ dcecjv"
+  <form
+    class="sc-bczRLJ gLjsoo"
   >
-    <button
-      class="sc-gsnTZi YVAZS"
-      type="button"
-    >
-      <svg
-        fill="currentColor"
-        height="20px"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 512 512"
-        width="20px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M216.08 192v143.85a40.08 40.08 0 0080.15 0l.13-188.55a67.94 67.94 0 10-135.87 0v189.82a95.51 95.51 0 10191 0V159.74"
-          fill="none"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-width="32"
-        />
-      </svg>
-    </button>
     <textarea
-      class="sc-dkzDqf dwSxGX"
+      class="sc-dkzDqf cEZdbI"
+      name="message"
       placeholder="Write a message"
     />
     <div
-      class="sc-hKMtZM ermruk"
+      class="sc-hKMtZM cpmeEy"
     >
-      <svg
-        fill="currentColor"
-        height="20px"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 512 512"
-        width="20px"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="sc-gsnTZi iQqeCK"
+        type="submit"
       >
-        <circle
-          cx="184"
-          cy="232"
-          r="24"
-        />
-        <path
-          d="M256.05 384c-45.42 0-83.62-29.53-95.71-69.83a8 8 0 017.82-10.17h175.69a8 8 0 017.82 10.17c-11.99 40.3-50.2 69.83-95.62 69.83z"
-        />
-        <circle
-          cx="328"
-          cy="232"
-          r="24"
-        />
-        <circle
-          cx="256"
-          cy="256"
-          fill="none"
-          r="208"
-          stroke-miterlimit="10"
-          stroke-width="32"
-        />
-      </svg>
-      <svg
-        fill="currentColor"
-        height="20px"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 512 512"
-        width="20px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M192 448h128m64-240v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32m128 160v80"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="32"
-        />
-        <path
-          d="M256 64a63.68 63.68 0 00-64 64v111c0 35.2 29 65 64 65s64-29 64-65V128c0-36-28-64-64-64z"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="32"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M476.59 227.05l-.16-.07L49.35 49.84A23.56 23.56 0 0027.14 52 24.65 24.65 0 0016 72.59v113.29a24 24 0 0019.52 23.57l232.93 43.07a4 4 0 010 7.86L35.53 303.45A24 24 0 0016 327v113.31A23.57 23.57 0 0026.59 460a23.94 23.94 0 0013.22 4 24.55 24.55 0 009.52-1.93L476.4 285.94l.19-.09a32 32 0 000-58.8z"
+          />
+        </svg>
+      </button>
     </div>
-  </div>
+  </form>
 </div>
 `;
