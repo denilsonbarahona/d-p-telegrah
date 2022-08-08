@@ -6,8 +6,11 @@ const addClientToStream=(payload, socket)=>{
 
 const notifyUsers=(payload)=>{
   const socket = clients.get(payload.receiver);
-  socket.send(JSON.stringify(payload));
+  if (socket) {
+    socket.send(JSON.stringify(payload));
+  }
 };
+
 
 module.exports = {
   addClientToStream,

@@ -6,6 +6,9 @@ const dispatchActions=({action, payload}, socket)=>{
       addClientToStream(payload, socket);
       return;
     }
+    case "pre-offer":
+    case "answer":
+    case "candidate":
     case "notify": {
       notifyUsers(payload);
       return;
