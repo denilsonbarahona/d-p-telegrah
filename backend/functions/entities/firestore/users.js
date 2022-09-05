@@ -17,18 +17,21 @@ async function getUserByEmail(email) {
  * @return {object} user object
  */
 async function getUsers(email) {
-  const {contacts, id, name} = await getUserByEmail(email);
-  const users = contacts.map(async (item) => {
-    const user = await getUserById(item.id);
-    const chatId =
-      await getChatsByParticipants(
-          [{id: item.id, name: user.name},
-            {id, name},
-          ]);
-    return {...user, ...item, chatId: chatId[0], contacts: []};
-  });
-
-  return await Promise.all(users);
+  try {
+    const {contacts, id, name} = await getUserByEmail(email);
+    const users = contacts.map(async (item) => {
+      const user = await getUserById(item.id);
+      const chatId =
+        await getChatsByParticipants(
+            [{id: item.id, name: user.name},
+              {id, name},
+            ]);
+      return {...user, ...item, chatId: chatId[0], contacts: []};
+    });
+    return await Promise.all(users);
+  } catch {
+    return await Promise.all([]);
+  }
 }
 
 /**

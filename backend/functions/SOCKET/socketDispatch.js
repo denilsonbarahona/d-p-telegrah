@@ -9,7 +9,11 @@ const dispatchActions=({action, payload}, socket)=>{
     case "pre-offer":
     case "answer":
     case "candidate":
-    case "notify": {
+    case "notify":
+    case "availability":
+    case "reject-call":
+    case "accept-call":
+    case "hang-up": {
       notifyUsers(payload);
       return;
     }
