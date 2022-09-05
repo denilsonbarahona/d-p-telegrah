@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 
 import SidePanel from "@template/sidePanel";
 import Navigator from "@molecules/navigator";
 import Contact from "@molecules/contact";
 import { getContact } from "@Redux/features/contact/actions";
+import {Emit} from "@/app/socket/socket-instance";
+import { CheckAvailability } from "@/app/socket/socket-actions";
+import { SetBeggingCall } from "@Redux/features/webRTC";
 import { PanelTitle, TitleContainer } from "./call-panel.style";
 
 const CallPanel = () => {
@@ -25,6 +27,12 @@ const CallPanel = () => {
     // }
   }, []);
 
+  const HandleClick = (event, receiver) => {
+    event.stopPropagation();
+    CheckAvailability(user.id, receiver, Emit);
+    dispatch(SetBeggingCall(true));
+  };
+
   return (
     <>
       <TitleContainer>
@@ -40,7 +48,7 @@ const CallPanel = () => {
             src={contact.image}
             paragraph={`últ. vez ${contact.lastSeen}`}
           >
-            <Link to={`/conference?receiver=${contact.id}&request=true`}>Call</Link>
+            <button onClick={(event)=>HandleClick(event, contact.id)} type="button">Call</button>
           </Contact>
         ))}
       </SidePanel>

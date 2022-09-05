@@ -9,22 +9,23 @@ let localStream;
 let remoteStream;
 let peerConnection;
 
-
-const WebRTCConnection = async(sender, receiver) =>{
+const WebRTCConnection = async(sender, receiver, AddLocalStreamToStore, AddRemoteStreamToStore) =>{
     peerConnection = new RTCPeerConnection(webRTCConfig);
 
     peerConnection.onicecandidate = (event) => {
         if (event.candidate) {
-           sendCandidate(sender, receiver, event.candidate, Emit);
+            sendCandidate(sender, receiver, event.candidate, Emit);
         }
     };
 
     remoteStream = new MediaStream();
+    AddRemoteStreamToStore(remoteStream);
     document.querySelector("#videoRemote").srcObject = remoteStream;
     document.querySelector("#videoRemote").play();
 
     if (!localStream){
-        localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false});
+        localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:true});
+        AddLocalStreamToStore(localStream);
         document.querySelector("#video").srcObject = localStream;
         document.querySelector("#video").play();
     }
@@ -54,15 +55,15 @@ export const setICECandidate = async (candidate) => {
 };
 
 
-export const getPreOffer = async(sender, receiver) => {
-    await WebRTCConnection(sender, receiver);
+export const getPreOffer = async(sender, receiver, AddLocalStreamToStore, AddRemoteStreamToStore) => {
+    await WebRTCConnection(sender, receiver, AddLocalStreamToStore, AddRemoteStreamToStore);
     const preOffer = await peerConnection.createOffer();
     peerConnection.setLocalDescription(preOffer);
     return preOffer;
 };
 
-export const getAnswer = async(offer, sender, receiver) => {
-    await WebRTCConnection(sender, receiver);
+export const getAnswer = async(offer, sender, receiver, setLocalStream, setRemoteStream) => {
+    await WebRTCConnection(sender, receiver, setLocalStream, setRemoteStream);
     await peerConnection.setRemoteDescription(offer);
     const answer = await peerConnection.createAnswer();
     peerConnection.setLocalDescription(answer);
@@ -73,3 +74,12 @@ export const setRemoteAnswer = async (answer) => {
     await peerConnection.setRemoteDescription(answer);
 };
 
+export const hangUpWenRTCCall = () => {
+    if (peerConnection) {
+        peerConnection.close();
+        peerConnection = null;
+        return true;
+    }
+
+    return false;
+};

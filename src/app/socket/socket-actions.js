@@ -23,6 +23,42 @@ export const notifyUser = (sender, receiver, emit) => {
   }
 };
 
+export const CheckAvailability = (sender, receiver, emit) => {
+  try {
+    const json = {
+      action: "availability",
+      payload: { sender, receiver, type: "availability" },
+    };
+    emit(JSON.stringify(json));
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export const sendRejectCall = (sender, receiver, emit) => {
+  try {
+    const json = {
+      action: "reject-call",
+      payload: { sender, receiver, type: "reject-call" },
+    };
+    emit(JSON.stringify(json));
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export const sendAceptedCall = (sender, receiver, emit) => {
+  try {
+    const json = {
+      action: "accept-call",
+      payload: { sender, receiver, type: "accept-call" },
+    };
+    emit(JSON.stringify(json));
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 export const sendPreOffer = (sender, receiver, offer, emit) => {
   try {
     const json = {
@@ -52,6 +88,18 @@ export const sendCandidate = (sender, receiver, candidate, emit) => {
     const json = {
       action: "candidate",
       payload: { sender, receiver, candidate, type: "candidate" },
+    };
+    emit(JSON.stringify(json));
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export const hangUpCall = (receiver, emit) => {
+  try {
+    const json = {
+      action: "hang-up",
+      payload: { receiver, type: "hang-up" },
     };
     emit(JSON.stringify(json));
   } catch (e) {

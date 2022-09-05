@@ -13,7 +13,7 @@ const Google = () => {
     const {
       user: { displayName: name, email, photoURL: image },
     } = credentials;
-    dispatch(login({ name, email, image }));
+   dispatch(login({ name, email, image }));
   };
 
   return (

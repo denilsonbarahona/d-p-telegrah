@@ -9,12 +9,12 @@ import App from "@/app/ui/App";
 const root = createRoot(document.querySelector("#root"));
 
 root.render(
-  <React.StrictMode>
+ /*  <React.StrictMode> */
     <ContextProvider>
       <Provider store={Store}>
         <GlobalStyle />
         <App />
       </Provider>
     </ContextProvider>
-  </React.StrictMode>
+/*   </React.StrictMode> */
 );
