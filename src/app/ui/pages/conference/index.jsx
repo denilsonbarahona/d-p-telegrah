@@ -123,7 +123,7 @@ const Conference = () => {
                   </Actions>
                   <Actions
                     onClick={() => {
-                      localStream.getAudioTracks()[0].enabled = !localStream.getAudioTracks()[0].enabled;
+                     localStream.getAudioTracks()[0].enabled = !localStream.getAudioTracks()[0].enabled;
                       setBufferingAudio(!isBufferingAudio);
                     }}
                     type="button"
@@ -132,6 +132,7 @@ const Conference = () => {
                         ? <BsFillMicFill />
                         : <BsFillMicMuteFill /> }
                   </Actions>
+                  {console.log(JSON.stringify(localStream), "parsing")}
                   <Actions
                     onClick={() => {
                       localStream.getVideoTracks()[0].enabled = !localStream.getVideoTracks()[0].enabled;

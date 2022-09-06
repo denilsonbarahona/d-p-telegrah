@@ -4,10 +4,10 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
+    "serve": "node index.js",
+    "shell": "node index.js",
+    "start": "node index.js",
+    "deploy": "node index.js",
     "logs": "firebase functions:log"
   },
   "engines": {

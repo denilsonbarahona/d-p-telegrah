@@ -21,5 +21,4 @@ app.post("/api/chats", chatController.createChat({db}));
 app.get("/api/messages/:id/:page", chatController.getMessageFromChat({db}));
 app.patch("/api/messages", chatController.addMessageToChat({db}));
 
-
 module.exports = app;

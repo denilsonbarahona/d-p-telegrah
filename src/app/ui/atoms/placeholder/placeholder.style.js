@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
 export const PlaceHolderContainer = styled.div`
-    display: grid;
+    display: none;
     place-items: center;
+
+    @media screen and (min-width: 1024px) {
+    & {
+      display: grid;
+    }
+  }
 `;
 
 export const PlaceHolderText = styled.h1`
